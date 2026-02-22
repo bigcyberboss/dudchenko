@@ -888,8 +888,14 @@ p {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     aspect-ratio: 3/4;
-    object-fit: cover;
+    overflow: hidden;
     background: var(--color-bg-section);
+}
+
+.coach-preview__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .coach-preview__badge {
