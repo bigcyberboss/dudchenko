@@ -129,16 +129,21 @@
         <!-- ==================== HERO ==================== -->
         <section class="hero" id="main">
             <div class="hero__bg">
-                <!-- Видео Сергея за столом с его сайта -->
+                <img
+                    src="images/hero/hero-poster.jpg"
+                    alt=""
+                    class="hero__poster"
+                    id="heroPoster"
+                />
                 <video
+                    id="heroVideo"
                     autoplay
                     muted
                     loop
                     playsinline
-                    poster="images/hero/hero-poster.jpg"
+                    preload="auto"
                 >
                     <source src="images/hero/hero-video.mp4" type="video/mp4" />
-                    <!-- Фолбэк: постер-изображение показывается если видео не грузится -->
                 </video>
             </div>
             <div class="hero__overlay"></div>

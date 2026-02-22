@@ -586,6 +586,18 @@ p {
     object-position: center center;
 }
 
+.hero__poster {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    transition: opacity 0.8s ease;
+}
+
+.hero__poster--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .hero__overlay {
     position: absolute;
     inset: 0;

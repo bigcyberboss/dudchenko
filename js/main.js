@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuiz();
   initLightbox();
   initBookingModal();
+  initHeroVideo();
 });
 
 /* --- Мобильное меню (бургер) --- */
@@ -45,6 +46,17 @@ function initBurgerMenu() {
       burger.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
     });
+  });
+}
+
+/* --- Hero-видео: постер поверх видео, пока оно не начнёт играть --- */
+function initHeroVideo() {
+  const video = document.getElementById("heroVideo");
+  const poster = document.getElementById("heroPoster");
+  if (!video || !poster) return;
+
+  video.addEventListener("playing", () => {
+    poster.classList.add("hero__poster--hidden");
   });
 }
 
