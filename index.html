@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мирок настольного тенниса — любительский рейтинговый турнир по настольному теннису в Симферополе. Еженедельные турниры, тренировки, обучение.">
+
+  <title>Мирок настольного тенниса — Любительский турнир в Симферополе</title>
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="header__logo" aria-label="На главную">
+        <span class="header__logo-icon">&#127955;</span>
+        <span class="header__logo-text">МИРОК <span>НТ</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О турнире</a></li>
+          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
+          <li><a href="rules.html" class="nav__link">Правила</a></li>
+          <li><a href="coach.html" class="nav__link">Тренер</a></li>
+          <li><a href="fun.html" class="nav__link">Интересное</a></li>
+          <li class="nav__cta">
+            <a href="register.html" class="btn btn--primary">Записаться</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+    <a href="index.html" class="nav__link nav__link--active">Главная</a>
+    <a href="about.html" class="nav__link">О турнире</a>
+    <a href="tournaments.html" class="nav__link">Турниры</a>
+    <a href="rules.html" class="nav__link">Правила</a>
+    <a href="coach.html" class="nav__link">Тренер</a>
+    <a href="fun.html" class="nav__link">Интересное</a>
+    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <!-- Заменить на реальное фото Сергея за столом -->
+      <img src="https://images.unsplash.com/photo-1558000143-a78f8299c40b?w=1600&q=80"
+           alt="Настольный теннис — игрок за столом"
+           loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__badge">Симферополь, ТРЦ «Палас»</div>
+
+      <h1 class="hero__title">
+        Мирок<br><span>настольного тенниса</span>
+      </h1>
+
+      <p class="hero__description">
+        Любительский рейтинговый турнир для игроков любого уровня.
+        Каждую среду — соревнования, общение и рост мастерства.
+      </p>
+
+      <div class="hero__buttons">
+        <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+        <a href="about.html" class="btn btn--outline btn--lg" style="border-color:#fff; color:#fff;">Узнать больше</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number">50+</span>
+          <span class="hero__stat-label">Турниров проведено</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">16</span>
+          <span class="hero__stat-label">Участников макс.</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">2</span>
+          <span class="hero__stat-label">Рейтинга (TTW, RTTF)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== БЛИЖАЙШИЙ ТУРНИР ==================== -->
+  <section class="next-tournament">
+    <div class="container next-tournament__inner">
+      <div class="next-tournament__info">
+        <h2>Ближайший турнир</h2>
+        <div class="next-tournament__details">
+          <div class="next-tournament__detail">
+            <span class="next-tournament__detail-icon">&#128197;</span>
+            <span>Среда, 26 февраля 2026</span>
+          </div>
+          <div class="next-tournament__detail">
+            <span class="next-tournament__detail-icon">&#9200;</span>
+            <span>Начало в 10:30</span>
+          </div>
+          <div class="next-tournament__detail">
+            <span class="next-tournament__detail-icon">&#128205;</span>
+            <span>ТРЦ «Палас», 3 этаж</span>
+          </div>
+        </div>
+      </div>
+      <div class="countdown" id="countdown">
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-days">0</span>
+          <span class="countdown__label">Дней</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-hours">0</span>
+          <span class="countdown__label">Часов</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-min">0</span>
+          <span class="countdown__label">Минут</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-sec">0</span>
+          <span class="countdown__label">Секунд</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== О ТУРНИРЕ (карточки) ==================== -->
+  <section class="section" id="about-preview">
+    <div class="container">
+      <h2 class="section__title">Почему «Мирок»?</h2>
+      <p class="section__subtitle">Турнир создан для тех, кто любит настольный теннис — независимо от возраста и уровня</p>
+
+      <div class="features">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">&#127942;</div>
+          <h3 class="feature-card__title">Открыт для всех</h3>
+          <p class="feature-card__text">
+            Участвуют игроки любого уровня — от начинающих до опытных любителей. Главное — желание играть!
+          </p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">&#128200;</div>
+          <h3 class="feature-card__title">Рейтинговый</h3>
+          <p class="feature-card__text">
+            Результаты учитываются в двух всероссийских рейтингах — TTW и RTTF. Каждая игра на счету!
+          </p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">&#128176;</div>
+          <h3 class="feature-card__title">Доступный</h3>
+          <p class="feature-card__text">
+            Взнос всего ~500 руб. — только аренда столов. Никаких скрытых платежей. Награды — медали и грамоты.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ПОСЛЕДНИЕ ТУРНИРЫ ==================== -->
+  <section class="section section--gray" id="latest-tournaments">
+    <div class="container">
+      <h2 class="section__title">Последние турниры</h2>
+      <p class="section__subtitle">Результаты недавних соревнований</p>
+
+      <div class="tournaments-grid">
+        <article class="tournament-card animate-on-scroll">
+          <div class="tournament-card__image" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:3rem;">&#127955;</div>
+          <div class="tournament-card__body">
+            <span class="tournament-card__date">18 февраля 2026</span>
+            <h3 class="tournament-card__title">Турнир «Мирок»</h3>
+            <p class="tournament-card__results">Еженедельный рейтинговый турнир в ТРЦ «Палас»</p>
+            <a href="tournaments.html" class="tournament-card__link">Результаты &#8594;</a>
+          </div>
+        </article>
+
+        <article class="tournament-card animate-on-scroll">
+          <div class="tournament-card__image" style="background: linear-gradient(135deg, #1565C0, #0D47A1); display:flex; align-items:center; justify-content:center; color:#fff; font-size:3rem;">&#127955;</div>
+          <div class="tournament-card__body">
+            <span class="tournament-card__date">11 февраля 2026</span>
+            <h3 class="tournament-card__title">Турнир «Мирок»</h3>
+            <p class="tournament-card__results">Еженедельный рейтинговый турнир в ТРЦ «Палас»</p>
+            <a href="tournaments.html" class="tournament-card__link">Результаты &#8594;</a>
+          </div>
+        </article>
+
+        <article class="tournament-card animate-on-scroll">
+          <div class="tournament-card__image" style="background: linear-gradient(135deg, #E65100, #BF360C); display:flex; align-items:center; justify-content:center; color:#fff; font-size:3rem;">&#127955;</div>
+          <div class="tournament-card__body">
+            <span class="tournament-card__date">4 февраля 2026</span>
+            <h3 class="tournament-card__title">Турнир «Мирок»</h3>
+            <p class="tournament-card__results">Еженедельный рейтинговый турнир в ТРЦ «Палас»</p>
+            <a href="tournaments.html" class="tournament-card__link">Результаты &#8594;</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top:var(--space-xl);">
+        <a href="tournaments.html" class="btn btn--outline">Все турниры</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ТРЕНЕР (мини-блок) ==================== -->
+  <section class="section" id="coach-preview">
+    <div class="container">
+      <div class="coach-preview">
+        <!-- Заменить на реальное фото Сергея -->
+        <div class="coach-preview__image" style="background: linear-gradient(135deg, var(--color-primary), #1565C0); display:flex; align-items:center; justify-content:center; color:#fff; font-size:5rem;">&#129338;</div>
+
+        <div class="coach-preview__info">
+          <span class="coach-preview__badge">Тренер по настольному теннису</span>
+          <h2 class="coach-preview__title">Сергей Дудченко</h2>
+          <p class="coach-preview__text">
+            Дипломированный тренер с высшим образованием по теории и методике
+            настольного тенниса. Уникальный опыт — играет обеими руками
+            и имеет два рейтинга в системе TTW.
+          </p>
+
+          <div class="coach-preview__highlights">
+            <div class="coach-preview__highlight">
+              <span class="coach-preview__highlight-icon">&#10003;</span>
+              <span>Диплом тренера НТ</span>
+            </div>
+            <div class="coach-preview__highlight">
+              <span class="coach-preview__highlight-icon">&#10003;</span>
+              <span>Игра двумя руками</span>
+            </div>
+            <div class="coach-preview__highlight">
+              <span class="coach-preview__highlight-icon">&#10003;</span>
+              <span>Теннисная пушка</span>
+            </div>
+            <div class="coach-preview__highlight">
+              <span class="coach-preview__highlight-icon">&#10003;</span>
+              <span>Первое занятие бесплатно</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:var(--space-sm); flex-wrap:wrap;">
+            <a href="coach.html" class="btn btn--primary">Подробнее о тренере</a>
+            <a href="coach.html#booking" class="btn btn--outline">Записаться на занятие</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Колонка 1: О проекте -->
+        <div>
+          <div class="header__logo" style="margin-bottom:var(--space-sm);">
+            <span class="header__logo-icon">&#127955;</span>
+            <span class="header__logo-text">МИРОК <span>НТ</span></span>
+          </div>
+          <p class="footer__text">
+            Любительский рейтинговый турнир по настольному теннису в Симферополе.
+            Каждую среду в ТРЦ «Палас». Открыт для всех уровней.
+          </p>
+          <div class="footer__socials">
+            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">
+              &#9993;
+            </a>
+            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">
+              &#9654;
+            </a>
+            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">
+              VK
+            </a>
+          </div>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div>
+          <h4 class="footer__title">Разделы</h4>
+          <a href="about.html" class="footer__link">О турнире</a>
+          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
+          <a href="register.html" class="footer__link">Регистрация</a>
+          <a href="rules.html" class="footer__link">Правила и регламент</a>
+          <a href="coach.html" class="footer__link">Тренер</a>
+          <a href="fun.html" class="footer__link">Интересное</a>
+        </div>
+
+        <!-- Колонка 3: Контакты -->
+        <div>
+          <h4 class="footer__title">Контакты</h4>
+          <a href="mailto:slserg2008@mail.ru" class="footer__link">
+            &#9993; slserg2008@mail.ru
+          </a>
+          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">
+            &#128172; Telegram
+          </a>
+          <p class="footer__link" style="cursor:default;">
+            &#128205; Симферополь, пр. Кирова 78
+          </p>
+          <p class="footer__link" style="cursor:default;">
+            &#127970; ТРЦ «Палас», 3 этаж, Ping Pong Club
+          </p>
+        </div>
+
+        <!-- Колонка 4: Рейтинги -->
+        <div>
+          <h4 class="footer__title">Рейтинги</h4>
+          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">
+            TTW — Рейтинг турниров
+          </a>
+          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">
+            RTTF — Российская федерация
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025&ndash;2026 Дудченко С.В. Все права защищены. «Мирок настольного тенниса»</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
