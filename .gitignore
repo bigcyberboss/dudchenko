@@ -1,0 +1,36 @@
+# Чувствительные данные
+.env
+.env.local
+.env.production
+*.key
+*.pem
+secrets/
+config/private/
+
+# Личные данные заказчика
+private/
+credentials/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (если потребуется)
+node_modules/
+package-lock.json
+
+# Скриншоты переписки (личные данные)
+Screenshot*.png
+screenshots/private/
+
+# Логи
+*.log
+logs/
