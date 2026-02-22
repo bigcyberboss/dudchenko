@@ -8,6 +8,32 @@
             content="Регистрация на турнир «Мирок настольного тенниса» — заполните форму и приходите играть каждую среду."
         />
         <title>Регистрация — Мирок настольного тенниса</title>
+
+        <link
+            rel="canonical"
+            href="https://bigcyberboss.github.io/dudchenko/register.html"
+        />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://bigcyberboss.github.io/dudchenko/register.html"
+        />
+        <meta
+            property="og:title"
+            content="Регистрация — Мирок настольного тенниса"
+        />
+        <meta
+            property="og:description"
+            content="Регистрация на турнир «Мирок настольного тенниса» — заполните форму и приходите играть каждую среду."
+        />
+        <meta
+            property="og:image"
+            content="https://bigcyberboss.github.io/dudchenko/images/hero/page-hero-bg.jpg"
+        />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:site_name" content="Мирок настольного тенниса" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -17,6 +43,7 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
+        <a href="#main" class="skip-link">Перейти к содержимому</a>
         <!-- HEADER -->
         <header class="header" id="header">
             <div class="container header__inner">
@@ -70,7 +97,7 @@
             </div>
         </header>
 
-        <div
+        <nav
             class="mobile-menu"
             id="mobileMenu"
             aria-label="Мобильная навигация"
@@ -84,10 +111,10 @@
             <a href="register.html" class="btn btn--primary btn--lg"
                 >Записаться на турнир</a
             >
-        </div>
+        </nav>
 
         <!-- PAGE HERO -->
-        <section class="page-hero">
+        <section class="page-hero" id="main">
             <div class="container page-hero__content">
                 <h1 class="page-hero__title">Регистрация на турнир</h1>
                 <p class="page-hero__subtitle">
@@ -101,7 +128,27 @@
             <div class="container">
                 <div class="register-form-wrapper">
                     <!-- Форма -->
-                    <form id="registerForm" novalidate>
+                    <form
+                        id="registerForm"
+                        action="https://formsubmit.co/slserg2008@mail.ru"
+                        method="POST"
+                        novalidate
+                    >
+                        <!-- Formsubmit.co: настройки -->
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="Новая заявка на турнир «Мирок НТ»"
+                        />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input
+                            type="text"
+                            name="_honey"
+                            style="display: none"
+                            tabindex="-1"
+                            autocomplete="off"
+                        />
                         <div class="form-group">
                             <label for="fullname" class="form-label">
                                 Фамилия Имя Отчество

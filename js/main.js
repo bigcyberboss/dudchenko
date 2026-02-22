@@ -222,9 +222,34 @@ function initRegisterForm() {
 
     if (hasError) return;
 
-    // Скрываем форму, показываем сообщение
-    form.style.display = "none";
-    success.classList.add("form-success--visible");
+    // Отправляем данные через fetch
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Отправка...";
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.style.display = "none";
+          success.classList.add("form-success--visible");
+        } else {
+          throw new Error("Ошибка сервера");
+        }
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Отправить заявку";
+        showError(
+          fullname,
+          "Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.",
+        );
+      });
   });
 }
 
