@@ -6,7 +6,7 @@
 /* --- CSS Переменные --- */
 :root {
     /* Цвета */
-    --color-primary: #1b6b28;
+    --color-primary: #1b5e20;
     --color-primary-dark: #145220;
     --color-primary-light: #e8f5e9;
     --color-accent: #ff6d00;
@@ -136,6 +136,119 @@ button:focus-visible {
 }
 
 /* --- Утилиты --- */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.mt-xl {
+    margin-top: var(--space-xl);
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+
+.mt-md {
+    margin-top: var(--space-md);
+}
+
+.mt-sm {
+    margin-top: var(--space-sm);
+}
+
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.flex-center-wrap {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-wrap-sm {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.info-block {
+    max-width: 640px;
+    margin: var(--space-xl) auto 0;
+    text-align: center;
+}
+
+.hero__btn-outline-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.tournament-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.tournament-card__placeholder--green {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-dark)
+    );
+}
+
+.tournament-card__placeholder--blue {
+    background: linear-gradient(135deg, #1565c0, #0d47a1);
+}
+
+.tournament-card__placeholder--orange {
+    background: linear-gradient(135deg, #e65100, #bf360c);
+}
+
+.coach-preview__placeholder {
+    background: linear-gradient(135deg, var(--color-primary), #1565c0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 5rem;
+}
+
+.bracket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.booking-address {
+    color: var(--color-text-light);
+    opacity: 0.7;
+}
+
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -892,7 +1005,7 @@ p {
     background: var(--color-bg-dark);
     background-image:
         linear-gradient(135deg, rgba(27, 107, 40, 0.3), rgba(13, 27, 42, 0.95)),
-        url("https://tt.sergey-dudchenko.ru/wp-content/uploads/2023/09/ttfon2_5-scaled.jpg");
+        url("../images/hero/page-hero-bg.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -1279,6 +1392,24 @@ p {
     margin-top: 4px;
 }
 
+.form-input--error,
+.form-select--error,
+.form-textarea--error {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+}
+
+.form-error {
+    font-size: var(--text-xs);
+    color: var(--color-error);
+    margin-top: 4px;
+    display: none;
+}
+
+.form-error--visible {
+    display: block;
+}
+
 .form-checkbox {
     display: flex;
     align-items: flex-start;
@@ -1530,6 +1661,48 @@ p {
 .service-card__text {
     color: var(--color-text-secondary);
     font-size: var(--text-sm);
+}
+
+/* ============================================
+   VIDEO (YouTube embed)
+   ============================================ */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.video-card__embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-card__embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-card__caption {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-align: center;
 }
 
 /* ============================================

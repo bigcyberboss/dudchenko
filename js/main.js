@@ -73,7 +73,7 @@ function initCountdown() {
 
   if (!daysEl) return;
 
-  // Ближайший турнир: среда 26 февраля 2026, 10:30 по Москве (UTC+3)
+  // Ближайший турнир: среда 25 февраля 2026, 10:30 по Москве (UTC+3)
   const targetDate = new Date("2026-02-25T07:30:00Z"); // 10:30 MSK = 07:30 UTC
 
   function update() {
@@ -173,25 +173,54 @@ function initRegisterForm() {
   const success = document.getElementById("formSuccess");
   if (!form || !success) return;
 
+  function showError(input, message) {
+    input.classList.add("form-input--error");
+    let errorEl = input.parentElement.querySelector(".form-error");
+    if (!errorEl) {
+      errorEl = document.createElement("p");
+      errorEl.className = "form-error";
+      input.after(errorEl);
+    }
+    errorEl.textContent = message;
+    errorEl.classList.add("form-error--visible");
+  }
+
+  function clearErrors() {
+    form.querySelectorAll(".form-input--error").forEach((el) => {
+      el.classList.remove("form-input--error");
+    });
+    form.querySelectorAll(".form-error").forEach((el) => {
+      el.classList.remove("form-error--visible");
+    });
+  }
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    clearErrors();
 
     const fullname = form.querySelector("#fullname");
     const contact = form.querySelector("#contact");
     const agree = form.querySelector("#agree");
+    let hasError = false;
 
     if (!fullname.value.trim()) {
-      fullname.focus();
-      return;
+      showError(fullname, "Укажите ваше ФИО");
+      if (!hasError) fullname.focus();
+      hasError = true;
     }
     if (!contact.value.trim()) {
-      contact.focus();
-      return;
+      showError(contact, "Укажите Telegram или телефон для связи");
+      if (!hasError) contact.focus();
+      hasError = true;
     }
     if (!agree.checked) {
-      agree.focus();
-      return;
+      const checkbox = agree.closest(".form-checkbox");
+      if (checkbox) checkbox.style.outline = "2px solid var(--color-error)";
+      if (!hasError) agree.focus();
+      hasError = true;
     }
+
+    if (hasError) return;
 
     // Скрываем форму, показываем сообщение
     form.style.display = "none";

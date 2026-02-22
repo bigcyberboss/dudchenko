@@ -1,196 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Регистрация на турнир «Мирок настольного тенниса» — заполните форму и приходите играть каждую среду.">
-  <title>Регистрация — Мирок настольного тенниса</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Регистрация на турнир «Мирок настольного тенниса» — заполните форму и приходите играть каждую среду."
+        />
+        <title>Регистрация — Мирок настольного тенниса</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <div class="container header__inner">
+                <a
+                    href="index.html"
+                    class="header__logo"
+                    aria-label="На главную"
+                >
+                    <span class="header__logo-icon">&#127955;</span>
+                    <span class="header__logo-text">МИРОК <span>НТ</span></span>
+                </a>
+                <nav class="nav" aria-label="Основная навигация">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="nav__link">О турнире</a>
+                        </li>
+                        <li>
+                            <a href="tournaments.html" class="nav__link"
+                                >Турниры</a
+                            >
+                        </li>
+                        <li>
+                            <a href="rules.html" class="nav__link">Правила</a>
+                        </li>
+                        <li>
+                            <a href="coach.html" class="nav__link">Тренер</a>
+                        </li>
+                        <li>
+                            <a href="fun.html" class="nav__link">Интересное</a>
+                        </li>
+                        <li class="nav__cta">
+                            <a href="register.html" class="btn btn--primary"
+                                >Записаться</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <button
+                    class="burger"
+                    id="burger"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </header>
 
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="index.html" class="header__logo" aria-label="На главную">
-        <span class="header__logo-icon">&#127955;</span>
-        <span class="header__logo-text">МИРОК <span>НТ</span></span>
-      </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Главная</a></li>
-          <li><a href="about.html" class="nav__link">О турнире</a></li>
-          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
-          <li><a href="rules.html" class="nav__link">Правила</a></li>
-          <li><a href="coach.html" class="nav__link">Тренер</a></li>
-          <li><a href="fun.html" class="nav__link">Интересное</a></li>
-          <li class="nav__cta"><a href="register.html" class="btn btn--primary">Записаться</a></li>
-        </ul>
-      </nav>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="nav__link">Главная</a>
-    <a href="about.html" class="nav__link">О турнире</a>
-    <a href="tournaments.html" class="nav__link">Турниры</a>
-    <a href="rules.html" class="nav__link">Правила</a>
-    <a href="coach.html" class="nav__link">Тренер</a>
-    <a href="fun.html" class="nav__link">Интересное</a>
-    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
-  </div>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container page-hero__content">
-      <h1 class="page-hero__title">Регистрация на турнир</h1>
-      <p class="page-hero__subtitle">Заполните форму — и мы ждём вас в среду в 10:30!</p>
-    </div>
-  </section>
-
-  <!-- ФОРМА РЕГИСТРАЦИИ -->
-  <section class="section register-section">
-    <div class="container">
-      <div class="register-form-wrapper">
-
-        <!-- Форма -->
-        <form id="registerForm" novalidate>
-          <div class="form-group">
-            <label for="fullname" class="form-label">
-              Фамилия Имя Отчество <span class="form-label__required">*</span>
-            </label>
-            <input type="text" id="fullname" name="fullname" class="form-input"
-                   placeholder="Например: Иванов Иван Иванович" required>
-          </div>
-
-          <div class="form-group">
-            <label for="ttw-rating" class="form-label">
-              Рейтинг TTW
-            </label>
-            <input type="number" id="ttw-rating" name="ttw_rating" class="form-input"
-                   placeholder="Например: 450" min="0" max="3000">
-            <p class="form-hint">Если ещё нет рейтинга — оставьте пустым, создадим после первого турнира.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="contact" class="form-label">
-              Telegram или телефон <span class="form-label__required">*</span>
-            </label>
-            <input type="text" id="contact" name="contact" class="form-input"
-                   placeholder="@username или +7 (___) ___-__-__" required>
-            <p class="form-hint">Для связи и подтверждения участия.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="experience" class="form-label">
-              Опыт игры
-            </label>
-            <select id="experience" name="experience" class="form-select">
-              <option value="">— Выберите —</option>
-              <option value="beginner">Начинающий (до 1 года)</option>
-              <option value="amateur">Любитель (1-3 года)</option>
-              <option value="experienced">Опытный (3+ лет)</option>
-              <option value="pro">Спортсмен (разряд)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="comment" class="form-label">Комментарий</label>
-            <textarea id="comment" name="comment" class="form-textarea"
-                      placeholder="Любые вопросы или пожелания..."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-checkbox">
-              <input type="checkbox" id="agree" name="agree" required>
-              <span class="form-checkbox__text">
-                Я ознакомился с <a href="rules.html" target="_blank">правилами турнира</a>
-                и согласен оплатить взнос (~500 руб.) за аренду столов до начала турнира.
-              </span>
-            </label>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">
-            Отправить заявку
-          </button>
-        </form>
-
-        <!-- Успешная отправка -->
-        <div class="form-success" id="formSuccess">
-          <div class="form-success__icon">&#9989;</div>
-          <h3 class="form-success__title">Заявка отправлена!</h3>
-          <p class="form-success__text">
-            Мы свяжемся с вами в Telegram для подтверждения участия.
-            Ждём вас в среду в 10:30 в ТРЦ «Палас», 3 этаж!
-          </p>
-          <a href="index.html" class="btn btn--outline" style="margin-top:var(--space-lg);">На главную</a>
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Мобильная навигация"
+        >
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="about.html" class="nav__link">О турнире</a>
+            <a href="tournaments.html" class="nav__link">Турниры</a>
+            <a href="rules.html" class="nav__link">Правила</a>
+            <a href="coach.html" class="nav__link">Тренер</a>
+            <a href="fun.html" class="nav__link">Интересное</a>
+            <a href="register.html" class="btn btn--primary btn--lg"
+                >Записаться на турнир</a
+            >
         </div>
 
-      </div>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container page-hero__content">
+                <h1 class="page-hero__title">Регистрация на турнир</h1>
+                <p class="page-hero__subtitle">
+                    Заполните форму — и мы ждём вас в среду в 10:30!
+                </p>
+            </div>
+        </section>
 
-      <!-- Инфо-блок -->
-      <div style="max-width:640px; margin:var(--space-xl) auto 0; text-align:center;">
-        <p style="color:var(--color-text-secondary); font-size:var(--text-sm);">
-          Вопросы по регистрации? Напишите напрямую:
-          <a href="https://t.me/dudc_sergej" target="_blank" rel="noopener">Telegram @dudc_sergej</a>
-          или <a href="mailto:slserg2008@mail.ru">slserg2008@mail.ru</a>
-        </p>
-      </div>
-    </div>
-  </section>
+        <!-- ФОРМА РЕГИСТРАЦИИ -->
+        <section class="section register-section">
+            <div class="container">
+                <div class="register-form-wrapper">
+                    <!-- Форма -->
+                    <form id="registerForm" novalidate>
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">
+                                Фамилия Имя Отчество
+                                <span class="form-label__required">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                class="form-input"
+                                placeholder="Например: Иванов Иван Иванович"
+                                required
+                            />
+                        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="header__logo" style="margin-bottom:var(--space-sm);">
-            <span class="header__logo-icon">&#127955;</span>
-            <span class="header__logo-text">МИРОК <span>НТ</span></span>
-          </div>
-          <p class="footer__text">Любительский рейтинговый турнир по настольному теннису в Симферополе.</p>
-          <div class="footer__socials">
-            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">&#9993;</a>
-            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">&#9654;</a>
-            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__title">Разделы</h4>
-          <a href="about.html" class="footer__link">О турнире</a>
-          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
-          <a href="register.html" class="footer__link">Регистрация</a>
-          <a href="rules.html" class="footer__link">Правила и регламент</a>
-          <a href="coach.html" class="footer__link">Тренер</a>
-          <a href="fun.html" class="footer__link">Интересное</a>
-        </div>
-        <div>
-          <h4 class="footer__title">Контакты</h4>
-          <a href="mailto:slserg2008@mail.ru" class="footer__link">&#9993; slserg2008@mail.ru</a>
-          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">&#128172; Telegram</a>
-          <p class="footer__link" style="cursor:default;">&#128205; Симферополь, пр. Кирова 78</p>
-          <p class="footer__link" style="cursor:default;">&#127970; ТРЦ «Палас», 3 этаж</p>
-        </div>
-        <div>
-          <h4 class="footer__title">Рейтинги</h4>
-          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">TTW — Рейтинг турниров</a>
-          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">RTTF — Российская федерация</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного тенниса»</p>
-      </div>
-    </div>
-  </footer>
+                        <div class="form-group">
+                            <label for="ttw-rating" class="form-label">
+                                Рейтинг TTW
+                            </label>
+                            <input
+                                type="number"
+                                id="ttw-rating"
+                                name="ttw_rating"
+                                class="form-input"
+                                placeholder="Например: 450"
+                                min="0"
+                                max="3000"
+                            />
+                            <p class="form-hint">
+                                Если ещё нет рейтинга — оставьте пустым,
+                                создадим после первого турнира.
+                            </p>
+                        </div>
 
-  <script src="js/main.js" defer></script>
-</body>
+                        <div class="form-group">
+                            <label for="contact" class="form-label">
+                                Telegram или телефон
+                                <span class="form-label__required">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="contact"
+                                name="contact"
+                                class="form-input"
+                                placeholder="@username или +7 (___) ___-__-__"
+                                required
+                            />
+                            <p class="form-hint">
+                                Для связи и подтверждения участия.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience" class="form-label">
+                                Опыт игры
+                            </label>
+                            <select
+                                id="experience"
+                                name="experience"
+                                class="form-select"
+                            >
+                                <option value="">— Выберите —</option>
+                                <option value="beginner">
+                                    Начинающий (до 1 года)
+                                </option>
+                                <option value="amateur">
+                                    Любитель (1-3 года)
+                                </option>
+                                <option value="experienced">
+                                    Опытный (3+ лет)
+                                </option>
+                                <option value="pro">Спортсмен (разряд)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment" class="form-label"
+                                >Комментарий</label
+                            >
+                            <textarea
+                                id="comment"
+                                name="comment"
+                                class="form-textarea"
+                                placeholder="Любые вопросы или пожелания..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="agree"
+                                    name="agree"
+                                    required
+                                />
+                                <span class="form-checkbox__text">
+                                    Я ознакомился с
+                                    <a href="rules.html" target="_blank"
+                                        >правилами турнира</a
+                                    >
+                                    и согласен оплатить взнос (~500 руб.) за
+                                    аренду столов до начала турнира.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn--primary btn--lg w-full"
+                        >
+                            Отправить заявку
+                        </button>
+                    </form>
+
+                    <!-- Успешная отправка -->
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">&#9989;</div>
+                        <h3 class="form-success__title">Заявка отправлена!</h3>
+                        <p class="form-success__text">
+                            Мы свяжемся с вами в Telegram для подтверждения
+                            участия. Ждём вас в среду в 10:30 в ТРЦ «Палас», 3
+                            этаж!
+                        </p>
+                        <a href="index.html" class="btn btn--outline mt-lg"
+                            >На главную</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Инфо-блок -->
+                <div class="info-block">
+                    <p class="text-secondary text-sm">
+                        Вопросы по регистрации? Напишите напрямую:
+                        <a
+                            href="https://t.me/dudc_sergej"
+                            target="_blank"
+                            rel="noopener"
+                            >Telegram @dudc_sergej</a
+                        >
+                        или
+                        <a href="mailto:slserg2008@mail.ru"
+                            >slserg2008@mail.ru</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div>
+                        <div class="header__logo mb-sm">
+                            <span class="header__logo-icon">&#127955;</span>
+                            <span class="header__logo-text"
+                                >МИРОК <span>НТ</span></span
+                            >
+                        </div>
+                        <p class="footer__text">
+                            Любительский рейтинговый турнир по настольному
+                            теннису в Симферополе.
+                        </p>
+                        <div class="footer__socials">
+                            <a
+                                href="https://t.me/dudc_sergej"
+                                class="footer__social"
+                                aria-label="Telegram"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9993;</a
+                            >
+                            <a
+                                href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA"
+                                class="footer__social"
+                                aria-label="YouTube"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9654;</a
+                            >
+                            <a
+                                href="https://vk.com/sergei_dudchenko"
+                                class="footer__social"
+                                aria-label="ВКонтакте"
+                                target="_blank"
+                                rel="noopener"
+                                >VK</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Разделы</h4>
+                        <a href="about.html" class="footer__link">О турнире</a>
+                        <a href="tournaments.html" class="footer__link"
+                            >Турниры и результаты</a
+                        >
+                        <a href="register.html" class="footer__link"
+                            >Регистрация</a
+                        >
+                        <a href="rules.html" class="footer__link"
+                            >Правила и регламент</a
+                        >
+                        <a href="coach.html" class="footer__link">Тренер</a>
+                        <a href="fun.html" class="footer__link">Интересное</a>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Контакты</h4>
+                        <a href="mailto:slserg2008@mail.ru" class="footer__link"
+                            >&#9993; slserg2008@mail.ru</a
+                        >
+                        <a
+                            href="https://t.me/dudc_sergej"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >&#128172; Telegram</a
+                        >
+                        <p class="footer__link cursor-default">
+                            &#128205; Симферополь, пр. Кирова 78
+                        </p>
+                        <p class="footer__link cursor-default">
+                            &#127970; ТРЦ «Палас», 3 этаж
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Рейтинги</h4>
+                        <a
+                            href="https://r.ttw.ru/tournaments/"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >TTW — Рейтинг турниров</a
+                        >
+                        <a
+                            href="https://rttf.ru/tournaments/?halls[]=726"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >RTTF — Российская федерация</a
+                        >
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>
+                        &copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного
+                        тенниса»
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js" defer></script>
+    </body>
 </html>

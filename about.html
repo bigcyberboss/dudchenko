@@ -1,228 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="О турнире «Мирок настольного тенниса» — история, формат, условия участия, рейтинговые системы TTW и RTTF.">
-  <title>О турнире — Мирок настольного тенниса</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="О турнире «Мирок настольного тенниса» — история, формат, условия участия, рейтинговые системы TTW и RTTF."
+        />
+        <title>О турнире — Мирок настольного тенниса</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <div class="container header__inner">
+                <a
+                    href="index.html"
+                    class="header__logo"
+                    aria-label="На главную"
+                >
+                    <span class="header__logo-icon">&#127955;</span>
+                    <span class="header__logo-text">МИРОК <span>НТ</span></span>
+                </a>
+                <nav class="nav" aria-label="Основная навигация">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li>
+                            <a
+                                href="about.html"
+                                class="nav__link nav__link--active"
+                                >О турнире</a
+                            >
+                        </li>
+                        <li>
+                            <a href="tournaments.html" class="nav__link"
+                                >Турниры</a
+                            >
+                        </li>
+                        <li>
+                            <a href="rules.html" class="nav__link">Правила</a>
+                        </li>
+                        <li>
+                            <a href="coach.html" class="nav__link">Тренер</a>
+                        </li>
+                        <li>
+                            <a href="fun.html" class="nav__link">Интересное</a>
+                        </li>
+                        <li class="nav__cta">
+                            <a href="register.html" class="btn btn--primary"
+                                >Записаться</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <button
+                    class="burger"
+                    id="burger"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </header>
 
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="index.html" class="header__logo" aria-label="На главную">
-        <span class="header__logo-icon">&#127955;</span>
-        <span class="header__logo-text">МИРОК <span>НТ</span></span>
-      </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Главная</a></li>
-          <li><a href="about.html" class="nav__link nav__link--active">О турнире</a></li>
-          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
-          <li><a href="rules.html" class="nav__link">Правила</a></li>
-          <li><a href="coach.html" class="nav__link">Тренер</a></li>
-          <li><a href="fun.html" class="nav__link">Интересное</a></li>
-          <li class="nav__cta"><a href="register.html" class="btn btn--primary">Записаться</a></li>
-        </ul>
-      </nav>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </header>
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Мобильная навигация"
+        >
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="about.html" class="nav__link nav__link--active"
+                >О турнире</a
+            >
+            <a href="tournaments.html" class="nav__link">Турниры</a>
+            <a href="rules.html" class="nav__link">Правила</a>
+            <a href="coach.html" class="nav__link">Тренер</a>
+            <a href="fun.html" class="nav__link">Интересное</a>
+            <a href="register.html" class="btn btn--primary btn--lg"
+                >Записаться на турнир</a
+            >
+        </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="nav__link">Главная</a>
-    <a href="about.html" class="nav__link nav__link--active">О турнире</a>
-    <a href="tournaments.html" class="nav__link">Турниры</a>
-    <a href="rules.html" class="nav__link">Правила</a>
-    <a href="coach.html" class="nav__link">Тренер</a>
-    <a href="fun.html" class="nav__link">Интересное</a>
-    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
-  </div>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero__overlay"></div>
+            <div class="container page-hero__content">
+                <h1 class="page-hero__title">О турнире</h1>
+                <p class="page-hero__subtitle">
+                    Как появился «Мирок» и почему он стал любимым турниром для
+                    десятков игроков
+                </p>
+            </div>
+        </section>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="page-hero__overlay"></div>
-    <div class="container page-hero__content">
-      <h1 class="page-hero__title">О турнире</h1>
-      <p class="page-hero__subtitle">Как появился «Мирок» и почему он стал любимым турниром для десятков игроков</p>
-    </div>
-  </section>
+        <!-- ИСТОРИЯ -->
+        <section class="section">
+            <div class="container">
+                <div class="about-story">
+                    <div class="about-story__text">
+                        <h2 class="section__title text-left">
+                            Как всё начиналось
+                        </h2>
+                        <p>
+                            «Мирок настольного тенниса» — это личная инициатива
+                            одного человека, который начал играть в настольный
+                            теннис после 50 лет. То, что начиналось как утренние
+                            тренировки, постепенно переросло в регулярный
+                            рейтинговый турнир.
+                        </p>
+                        <p>
+                            Турнир проводится в утреннее время, что обеспечивает
+                            доступность оборудования и минимальную стоимость
+                            аренды столов. Каждую среду с 10:30 до 14:00 в ТРЦ
+                            «Палас» на 3-м этаже собираются любители настольного
+                            тенниса.
+                        </p>
+                        <p>
+                            Результаты каждого турнира официально передаются в
+                            два всероссийских любительских рейтинга —
+                            <strong>TTW</strong> и <strong>RTTF</strong>, что
+                            позволяет участникам укрепить свой рейтинговый
+                            статус.
+                        </p>
+                    </div>
+                    <div class="about-story__image animate-on-scroll">
+                        <img
+                            src="images/hero/about-tt.jpg"
+                            alt="Мирок настольного тенниса — турнир в ТРЦ Палас"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- ИСТОРИЯ -->
-  <section class="section">
-    <div class="container">
-      <div class="about-story">
-        <div class="about-story__text">
-          <h2 class="section__title" style="text-align:left;">Как всё начиналось</h2>
-          <p>
-            «Мирок настольного тенниса» — это личная инициатива одного человека, который начал играть
-            в настольный теннис после 50 лет. То, что начиналось как утренние тренировки,
-            постепенно переросло в регулярный рейтинговый турнир.
-          </p>
-          <p>
-            Турнир проводится в утреннее время, что обеспечивает доступность оборудования
-            и минимальную стоимость аренды столов. Каждую среду с 10:30 до 14:00
-            в ТРЦ «Палас» на 3-м этаже собираются любители настольного тенниса.
-          </p>
-          <p>
-            Результаты каждого турнира официально передаются в два всероссийских
-            любительских рейтинга — <strong>TTW</strong> и <strong>RTTF</strong>,
-            что позволяет участникам укрепить свой рейтинговый статус.
-          </p>
-        </div>
-        <div class="about-story__image animate-on-scroll">
-          <img src="https://tt.sergey-dudchenko.ru/wp-content/uploads/2024/04/site_tt.jpg"
-               alt="Мирок настольного тенниса — турнир в ТРЦ Палас">
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- ФОРМАТ -->
+        <section class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Формат турнира</h2>
+                <p class="section__subtitle">
+                    Всё продумано для комфорта участников
+                </p>
 
-  <!-- ФОРМАТ -->
-  <section class="section section--gray">
-    <div class="container">
-      <h2 class="section__title">Формат турнира</h2>
-      <p class="section__subtitle">Всё продумано для комфорта участников</p>
+                <div class="info-grid">
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#128197;</div>
+                        <h3 class="info-card__title">Каждую среду</h3>
+                        <p class="info-card__text">
+                            С 10:30 до 14:00. Регулярные соревнования без
+                            пропусков — играем круглый год.
+                        </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#128101;</div>
+                        <h3 class="info-card__title">До 16 участников</h3>
+                        <p class="info-card__text">
+                            Минимум 5 для проведения. Компактный формат — каждый
+                            сыграет достаточно встреч.
+                        </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#127942;</div>
+                        <h3 class="info-card__title">Три схемы турнира</h3>
+                        <p class="info-card__text">
+                            Олимпийская, прогрессивная или двухминусовка —
+                            формат зависит от числа участников.
+                        </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#128176;</div>
+                        <h3 class="info-card__title">Взнос ~500 руб.</h3>
+                        <p class="info-card__text">
+                            Только аренда столов. Никаких скрытых платежей.
+                            Турнир полностью некоммерческий.
+                        </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#127941;</div>
+                        <h3 class="info-card__title">Реальные награды</h3>
+                        <p class="info-card__text">
+                            Медали победителям, электронные грамоты, фото на
+                            сайте турнира.
+                        </p>
+                    </div>
+                    <div class="info-card animate-on-scroll">
+                        <div class="info-card__icon">&#128205;</div>
+                        <h3 class="info-card__title">ТРЦ «Палас»</h3>
+                        <p class="info-card__text">
+                            Пр. Кирова 78, Симферополь. 3-й этаж, «Ping Pong
+                            Club». Удобное расположение.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="info-grid">
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#128197;</div>
-          <h3 class="info-card__title">Каждую среду</h3>
-          <p class="info-card__text">С 10:30 до 14:00. Регулярные соревнования без пропусков — играем круглый год.</p>
-        </div>
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#128101;</div>
-          <h3 class="info-card__title">До 16 участников</h3>
-          <p class="info-card__text">Минимум 5 для проведения. Компактный формат — каждый сыграет достаточно встреч.</p>
-        </div>
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#127942;</div>
-          <h3 class="info-card__title">Три схемы турнира</h3>
-          <p class="info-card__text">Олимпийская, прогрессивная или двухминусовка — формат зависит от числа участников.</p>
-        </div>
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#128176;</div>
-          <h3 class="info-card__title">Взнос ~500 руб.</h3>
-          <p class="info-card__text">Только аренда столов. Никаких скрытых платежей. Турнир полностью некоммерческий.</p>
-        </div>
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#127941;</div>
-          <h3 class="info-card__title">Реальные награды</h3>
-          <p class="info-card__text">Медали победителям, электронные грамоты, фото на сайте турнира.</p>
-        </div>
-        <div class="info-card animate-on-scroll">
-          <div class="info-card__icon">&#128205;</div>
-          <h3 class="info-card__title">ТРЦ «Палас»</h3>
-          <p class="info-card__text">Пр. Кирова 78, Симферополь. 3-й этаж, «Ping Pong Club». Удобное расположение.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- РЕЙТИНГИ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Рейтинговые системы</h2>
+                <p class="section__subtitle">
+                    Каждая ваша игра учитывается в официальных любительских
+                    рейтингах России
+                </p>
 
-  <!-- РЕЙТИНГИ -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section__title">Рейтинговые системы</h2>
-      <p class="section__subtitle">Каждая ваша игра учитывается в официальных любительских рейтингах России</p>
+                <div class="ratings">
+                    <a
+                        href="https://r.ttw.ru/tournaments/"
+                        target="_blank"
+                        rel="noopener"
+                        class="rating-card animate-on-scroll"
+                    >
+                        <div class="rating-card__logo">TTW</div>
+                        <h3 class="rating-card__title">Table Tennis World</h3>
+                        <p class="rating-card__text">
+                            Всероссийский любительский рейтинг настольного
+                            тенниса. Прогресс к рангу, форма за 10 матчей,
+                            винрейт.
+                        </p>
+                        <span class="rating-card__link"
+                            >Перейти на TTW &#8594;</span
+                        >
+                    </a>
+                    <a
+                        href="https://rttf.ru/tournaments/?halls[]=726"
+                        target="_blank"
+                        rel="noopener"
+                        class="rating-card animate-on-scroll"
+                    >
+                        <div class="rating-card__logo">RTTF</div>
+                        <h3 class="rating-card__title">
+                            Российская федерация НТ
+                        </h3>
+                        <p class="rating-card__text">
+                            Федеральный рейтинг любителей. Турниры, статистика,
+                            профили игроков и клубы.
+                        </p>
+                        <span class="rating-card__link"
+                            >Перейти на RTTF &#8594;</span
+                        >
+                    </a>
+                </div>
+            </div>
+        </section>
 
-      <div class="ratings">
-        <a href="https://r.ttw.ru/tournaments/" target="_blank" rel="noopener" class="rating-card animate-on-scroll">
-          <div class="rating-card__logo">TTW</div>
-          <h3 class="rating-card__title">Table Tennis World</h3>
-          <p class="rating-card__text">Всероссийский любительский рейтинг настольного тенниса. Прогресс к рангу, форма за 10 матчей, винрейт.</p>
-          <span class="rating-card__link">Перейти на TTW &#8594;</span>
-        </a>
-        <a href="https://rttf.ru/tournaments/?halls[]=726" target="_blank" rel="noopener" class="rating-card animate-on-scroll">
-          <div class="rating-card__logo">RTTF</div>
-          <h3 class="rating-card__title">Российская федерация НТ</h3>
-          <p class="rating-card__text">Федеральный рейтинг любителей. Турниры, статистика, профили игроков и клубы.</p>
-          <span class="rating-card__link">Перейти на RTTF &#8594;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+        <!-- УСЛОВИЯ -->
+        <section class="section section--dark">
+            <div class="container text-center">
+                <h2 class="section__title">Как принять участие?</h2>
+                <p class="section__subtitle">
+                    Три простых шага — и вы на турнире
+                </p>
 
-  <!-- УСЛОВИЯ -->
-  <section class="section section--dark">
-    <div class="container" style="text-align:center;">
-      <h2 class="section__title">Как принять участие?</h2>
-      <p class="section__subtitle">Три простых шага — и вы на турнире</p>
+                <div class="steps">
+                    <div class="step animate-on-scroll">
+                        <div class="step__number">1</div>
+                        <h3 class="step__title">Зарегистрируйтесь</h3>
+                        <p class="step__text">
+                            Заполните форму на сайте или напишите в Telegram.
+                            Укажите ФИО и TTW-рейтинг.
+                        </p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step__number">2</div>
+                        <h3 class="step__title">Оплатите взнос</h3>
+                        <p class="step__text">
+                            ~500 руб. за аренду столов. Оплата до начала
+                            турнира.
+                        </p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step__number">3</div>
+                        <h3 class="step__title">Приходите играть!</h3>
+                        <p class="step__text">
+                            Среда, 10:30, ТРЦ «Палас», 3 этаж. Ракетку берите
+                            свою!
+                        </p>
+                    </div>
+                </div>
 
-      <div class="steps">
-        <div class="step animate-on-scroll">
-          <div class="step__number">1</div>
-          <h3 class="step__title">Зарегистрируйтесь</h3>
-          <p class="step__text">Заполните форму на сайте или напишите в Telegram. Укажите ФИО и TTW-рейтинг.</p>
-        </div>
-        <div class="step animate-on-scroll">
-          <div class="step__number">2</div>
-          <h3 class="step__title">Оплатите взнос</h3>
-          <p class="step__text">~500 руб. за аренду столов. Оплата до начала турнира.</p>
-        </div>
-        <div class="step animate-on-scroll">
-          <div class="step__number">3</div>
-          <h3 class="step__title">Приходите играть!</h3>
-          <p class="step__text">Среда, 10:30, ТРЦ «Палас», 3 этаж. Ракетку берите свою!</p>
-        </div>
-      </div>
+                <a href="register.html" class="btn btn--primary btn--lg mt-xl"
+                    >Записаться на ближайший турнир</a
+                >
+            </div>
+        </section>
 
-      <a href="register.html" class="btn btn--primary btn--lg" style="margin-top:var(--space-xl);">Записаться на ближайший турнир</a>
-    </div>
-  </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div>
+                        <div class="header__logo mb-sm">
+                            <span class="header__logo-icon">&#127955;</span>
+                            <span class="header__logo-text"
+                                >МИРОК <span>НТ</span></span
+                            >
+                        </div>
+                        <p class="footer__text">
+                            Любительский рейтинговый турнир по настольному
+                            теннису в Симферополе.
+                        </p>
+                        <div class="footer__socials">
+                            <a
+                                href="https://t.me/dudc_sergej"
+                                class="footer__social"
+                                aria-label="Telegram"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9993;</a
+                            >
+                            <a
+                                href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA"
+                                class="footer__social"
+                                aria-label="YouTube"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9654;</a
+                            >
+                            <a
+                                href="https://vk.com/sergei_dudchenko"
+                                class="footer__social"
+                                aria-label="ВКонтакте"
+                                target="_blank"
+                                rel="noopener"
+                                >VK</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Разделы</h4>
+                        <a href="about.html" class="footer__link">О турнире</a>
+                        <a href="tournaments.html" class="footer__link"
+                            >Турниры и результаты</a
+                        >
+                        <a href="register.html" class="footer__link"
+                            >Регистрация</a
+                        >
+                        <a href="rules.html" class="footer__link"
+                            >Правила и регламент</a
+                        >
+                        <a href="coach.html" class="footer__link">Тренер</a>
+                        <a href="fun.html" class="footer__link">Интересное</a>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Контакты</h4>
+                        <a href="mailto:slserg2008@mail.ru" class="footer__link"
+                            >&#9993; slserg2008@mail.ru</a
+                        >
+                        <a
+                            href="https://t.me/dudc_sergej"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >&#128172; Telegram</a
+                        >
+                        <p class="footer__link cursor-default">
+                            &#128205; Симферополь, пр. Кирова 78
+                        </p>
+                        <p class="footer__link cursor-default">
+                            &#127970; ТРЦ «Палас», 3 этаж
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Рейтинги</h4>
+                        <a
+                            href="https://r.ttw.ru/tournaments/"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >TTW — Рейтинг турниров</a
+                        >
+                        <a
+                            href="https://rttf.ru/tournaments/?halls[]=726"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >RTTF — Российская федерация</a
+                        >
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>
+                        &copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного
+                        тенниса»
+                    </p>
+                </div>
+            </div>
+        </footer>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="header__logo" style="margin-bottom:var(--space-sm);">
-            <span class="header__logo-icon">&#127955;</span>
-            <span class="header__logo-text">МИРОК <span>НТ</span></span>
-          </div>
-          <p class="footer__text">Любительский рейтинговый турнир по настольному теннису в Симферополе.</p>
-          <div class="footer__socials">
-            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">&#9993;</a>
-            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">&#9654;</a>
-            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__title">Разделы</h4>
-          <a href="about.html" class="footer__link">О турнире</a>
-          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
-          <a href="register.html" class="footer__link">Регистрация</a>
-          <a href="rules.html" class="footer__link">Правила и регламент</a>
-          <a href="coach.html" class="footer__link">Тренер</a>
-          <a href="fun.html" class="footer__link">Интересное</a>
-        </div>
-        <div>
-          <h4 class="footer__title">Контакты</h4>
-          <a href="mailto:slserg2008@mail.ru" class="footer__link">&#9993; slserg2008@mail.ru</a>
-          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">&#128172; Telegram</a>
-          <p class="footer__link" style="cursor:default;">&#128205; Симферополь, пр. Кирова 78</p>
-          <p class="footer__link" style="cursor:default;">&#127970; ТРЦ «Палас», 3 этаж</p>
-        </div>
-        <div>
-          <h4 class="footer__title">Рейтинги</h4>
-          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">TTW — Рейтинг турниров</a>
-          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">RTTF — Российская федерация</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного тенниса»</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-</body>
+        <script src="js/main.js" defer></script>
+    </body>
 </html>

@@ -1,290 +1,559 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Тренер Сергей Дудченко — дипломированный тренер по настольному теннису в Симферополе. Играет двумя руками, два рейтинга TTW.">
-  <title>Тренер — Мирок настольного тенниса</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="index.html" class="header__logo" aria-label="На главную">
-        <span class="header__logo-icon">&#127955;</span>
-        <span class="header__logo-text">МИРОК <span>НТ</span></span>
-      </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Главная</a></li>
-          <li><a href="about.html" class="nav__link">О турнире</a></li>
-          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
-          <li><a href="rules.html" class="nav__link">Правила</a></li>
-          <li><a href="coach.html" class="nav__link nav__link--active">Тренер</a></li>
-          <li><a href="fun.html" class="nav__link">Интересное</a></li>
-          <li class="nav__cta"><a href="register.html" class="btn btn--primary">Записаться</a></li>
-        </ul>
-      </nav>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="nav__link">Главная</a>
-    <a href="about.html" class="nav__link">О турнире</a>
-    <a href="tournaments.html" class="nav__link">Турниры</a>
-    <a href="rules.html" class="nav__link">Правила</a>
-    <a href="coach.html" class="nav__link nav__link--active">Тренер</a>
-    <a href="fun.html" class="nav__link">Интересное</a>
-    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
-  </div>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container page-hero__content">
-      <h1 class="page-hero__title">Тренер</h1>
-      <p class="page-hero__subtitle">Сергей Дудченко — организатор турнира и дипломированный тренер по настольному теннису</p>
-    </div>
-  </section>
-
-  <!-- ПРОФИЛЬ ТРЕНЕРА -->
-  <section class="section">
-    <div class="container">
-      <div class="coach-hero">
-        <div class="coach-hero__photo animate-on-scroll">
-          <img src="https://sergey-dudchenko.ru/data/_uploaded/image/dudchenko.png"
-               alt="Сергей Дудченко — тренер по настольному теннису">
-        </div>
-        <div>
-          <span class="coach-preview__badge">Дипломированный тренер</span>
-          <h2 style="margin-bottom:var(--space-sm);">Сергей Дудченко</h2>
-          <p style="color:var(--color-text-secondary); margin-bottom:var(--space-md);">
-            Начал играть в настольный теннис после 50 лет. За несколько лет прошёл путь
-            от новичка до дипломированного тренера с высшим образованием по теории
-            и методике настольного тенниса.
-          </p>
-          <p style="color:var(--color-text-secondary); margin-bottom:var(--space-md);">
-            Уникальная особенность — играет обеими руками и имеет
-            <strong>два рейтинга в системе TTW</strong>: один для правой руки, другой для левой.
-            Организатор еженедельного рейтингового турнира «Мирок настольного тенниса».
-          </p>
-
-          <div class="coach-stats">
-            <div class="coach-stat animate-on-scroll">
-              <span class="coach-stat__number">2</span>
-              <span class="coach-stat__label">Рейтинга TTW</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Тренер Сергей Дудченко — дипломированный тренер по настольному теннису в Симферополе. Играет двумя руками, два рейтинга TTW."
+        />
+        <title>Тренер — Мирок настольного тенниса</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header" id="header">
+            <div class="container header__inner">
+                <a
+                    href="index.html"
+                    class="header__logo"
+                    aria-label="На главную"
+                >
+                    <span class="header__logo-icon">&#127955;</span>
+                    <span class="header__logo-text">МИРОК <span>НТ</span></span>
+                </a>
+                <nav class="nav" aria-label="Основная навигация">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="nav__link">О турнире</a>
+                        </li>
+                        <li>
+                            <a href="tournaments.html" class="nav__link"
+                                >Турниры</a
+                            >
+                        </li>
+                        <li>
+                            <a href="rules.html" class="nav__link">Правила</a>
+                        </li>
+                        <li>
+                            <a
+                                href="coach.html"
+                                class="nav__link nav__link--active"
+                                >Тренер</a
+                            >
+                        </li>
+                        <li>
+                            <a href="fun.html" class="nav__link">Интересное</a>
+                        </li>
+                        <li class="nav__cta">
+                            <a href="register.html" class="btn btn--primary"
+                                >Записаться</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <button
+                    class="burger"
+                    id="burger"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
             </div>
-            <div class="coach-stat animate-on-scroll">
-              <span class="coach-stat__number">50+</span>
-              <span class="coach-stat__label">Турниров проведено</span>
+        </header>
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Мобильная навигация"
+        >
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="about.html" class="nav__link">О турнире</a>
+            <a href="tournaments.html" class="nav__link">Турниры</a>
+            <a href="rules.html" class="nav__link">Правила</a>
+            <a href="coach.html" class="nav__link nav__link--active">Тренер</a>
+            <a href="fun.html" class="nav__link">Интересное</a>
+            <a href="register.html" class="btn btn--primary btn--lg"
+                >Записаться на турнир</a
+            >
+        </div>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container page-hero__content">
+                <h1 class="page-hero__title">Тренер</h1>
+                <p class="page-hero__subtitle">
+                    Сергей Дудченко — организатор турнира и дипломированный
+                    тренер по настольному теннису
+                </p>
             </div>
-            <div class="coach-stat animate-on-scroll">
-              <span class="coach-stat__number">10:00-22:00</span>
-              <span class="coach-stat__label">Расписание</span>
+        </section>
+
+        <!-- ПРОФИЛЬ ТРЕНЕРА -->
+        <section class="section">
+            <div class="container">
+                <div class="coach-hero">
+                    <div class="coach-hero__photo animate-on-scroll">
+                        <img
+                            src="images/coach/dudchenko.png"
+                            alt="Сергей Дудченко — тренер по настольному теннису"
+                        />
+                    </div>
+                    <div>
+                        <span class="coach-preview__badge"
+                            >Дипломированный тренер</span
+                        >
+                        <h2 class="mb-sm">Сергей Дудченко</h2>
+                        <p class="text-secondary mt-md">
+                            Начал играть в настольный теннис после 50 лет. За
+                            несколько лет прошёл путь от новичка до
+                            дипломированного тренера с высшим образованием по
+                            теории и методике настольного тенниса.
+                        </p>
+                        <p class="text-secondary mt-md">
+                            Уникальная особенность — играет обеими руками и
+                            имеет
+                            <strong>два рейтинга в системе TTW</strong>: один
+                            для правой руки, другой для левой. Организатор
+                            еженедельного рейтингового турнира «Мирок
+                            настольного тенниса».
+                        </p>
+
+                        <div class="coach-stats">
+                            <div class="coach-stat animate-on-scroll">
+                                <span class="coach-stat__number">2</span>
+                                <span class="coach-stat__label"
+                                    >Рейтинга TTW</span
+                                >
+                            </div>
+                            <div class="coach-stat animate-on-scroll">
+                                <span class="coach-stat__number">50+</span>
+                                <span class="coach-stat__label"
+                                    >Турниров проведено</span
+                                >
+                            </div>
+                            <div class="coach-stat animate-on-scroll">
+                                <span class="coach-stat__number"
+                                    >10:00-22:00</span
+                                >
+                                <span class="coach-stat__label"
+                                    >Расписание</span
+                                >
+                            </div>
+                            <div class="coach-stat animate-on-scroll">
+                                <span class="coach-stat__number"
+                                    >0 &#8381;</span
+                                >
+                                <span class="coach-stat__label"
+                                    >Первое занятие</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="coach-stat animate-on-scroll">
-              <span class="coach-stat__number">0 &#8381;</span>
-              <span class="coach-stat__label">Первое занятие</span>
+        </section>
+
+        <!-- УСЛУГИ -->
+        <section class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Чему можно научиться</h2>
+                <p class="section__subtitle">
+                    Индивидуальные тренировки под ваш уровень и цели
+                </p>
+
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">&#127955;</div>
+                        <div>
+                            <h3 class="service-card__title">Базовая техника</h3>
+                            <p class="service-card__text">
+                                Правильный хват, стойка, работа ног. Топспин,
+                                подрезка, блок. Фундамент для уверенной игры.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">&#128170;</div>
+                        <div>
+                            <h3 class="service-card__title">Подачи и приём</h3>
+                            <p class="service-card__text">
+                                Разные типы подач с вращением. Чтение вращения
+                                мяча. Тактика приёма — как не проигрывать с
+                                подачи.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">&#129504;</div>
+                        <div>
+                            <h3 class="service-card__title">
+                                Тактика и стратегия
+                            </h3>
+                            <p class="service-card__text">
+                                Анализ стиля соперника, выбор тактики на матч.
+                                Когда атаковать, а когда обороняться. Работа по
+                                слабым зонам.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">&#128640;</div>
+                        <div>
+                            <h3 class="service-card__title">Теннисная пушка</h3>
+                            <p class="service-card__text">
+                                Тренировка с роботом для отработки конкретных
+                                элементов: топспин по подрезке, блок,
+                                контратака.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">&#127993;</div>
+                        <div>
+                            <h3 class="service-card__title">
+                                Подбор инвентаря
+                            </h3>
+                            <p class="service-card__text">
+                                Помощь с выбором ракетки, основания и накладок
+                                под ваш стиль игры. Объясним разницу и подберём
+                                оптимальный вариант.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-card__icon">
+                            &#128105;&#8205;&#128105;&#8205;&#128102;
+                        </div>
+                        <div>
+                            <h3 class="service-card__title">
+                                Групповые занятия
+                            </h3>
+                            <p class="service-card__text">
+                                Спарринг-сессии для 2-4 человек. Отработка
+                                игровых ситуаций. Подготовка к турниру.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- УСЛУГИ -->
-  <section class="section section--gray">
-    <div class="container">
-      <h2 class="section__title">Чему можно научиться</h2>
-      <p class="section__subtitle">Индивидуальные тренировки под ваш уровень и цели</p>
+        <!-- ВИДЕО С YOUTUBE -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Видео с тренировок</h2>
+                <p class="section__subtitle">
+                    Фрагменты игры и тренировочного процесса с YouTube-канала
+                </p>
 
-      <div class="services-grid">
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#127955;</div>
-          <div>
-            <h3 class="service-card__title">Базовая техника</h3>
-            <p class="service-card__text">Правильный хват, стойка, работа ног. Топспин, подрезка, блок. Фундамент для уверенной игры.</p>
-          </div>
-        </div>
+                <div class="video-grid">
+                    <div class="video-card animate-on-scroll">
+                        <div class="video-card__embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/videoseries?list=UUORoGaBUjJBkOFyATqjixNA"
+                                title="Видео с тренировок — Мирок настольного тенниса"
+                                allow="
+                                    accelerometer;
+                                    autoplay;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                "
+                                allowfullscreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                        <p class="video-card__caption">
+                            Последние видео с канала «Мирок настольного тенниса»
+                        </p>
+                    </div>
+                </div>
 
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#128170;</div>
-          <div>
-            <h3 class="service-card__title">Подачи и приём</h3>
-            <p class="service-card__text">Разные типы подач с вращением. Чтение вращения мяча. Тактика приёма — как не проигрывать с подачи.</p>
-          </div>
-        </div>
+                <div class="text-center mt-lg">
+                    <a
+                        href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn--outline"
+                    >
+                        Все видео на YouTube
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#129504;</div>
-          <div>
-            <h3 class="service-card__title">Тактика и стратегия</h3>
-            <p class="service-card__text">Анализ стиля соперника, выбор тактики на матч. Когда атаковать, а когда обороняться. Работа по слабым зонам.</p>
-          </div>
-        </div>
+        <!-- ДИПЛОМЫ И СЕРТИФИКАТЫ -->
+        <section class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Дипломы и сертификаты</h2>
+                <p class="section__subtitle">
+                    Подтверждение квалификации тренера
+                </p>
 
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#128640;</div>
-          <div>
-            <h3 class="service-card__title">Теннисная пушка</h3>
-            <p class="service-card__text">Тренировка с роботом для отработки конкретных элементов: топспин по подрезке, блок, контратака.</p>
-          </div>
-        </div>
+                <div class="certificates-grid">
+                    <div
+                        class="certificate-card animate-on-scroll"
+                        data-lightbox="images/certificates/diploma.jpg"
+                    >
+                        <img
+                            src="images/certificates/diploma.jpg"
+                            alt="Диплом тренера по настольному теннису"
+                            loading="lazy"
+                        />
+                        <div class="certificate-card__caption">
+                            Диплом тренера по НТ
+                        </div>
+                    </div>
 
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#127993;</div>
-          <div>
-            <h3 class="service-card__title">Подбор инвентаря</h3>
-            <p class="service-card__text">Помощь с выбором ракетки, основания и накладок под ваш стиль игры. Объясним разницу и подберём оптимальный вариант.</p>
-          </div>
-        </div>
+                    <div
+                        class="certificate-card animate-on-scroll"
+                        data-lightbox="images/certificates/diploma-appendix.jpg"
+                    >
+                        <img
+                            src="images/certificates/diploma-appendix.jpg"
+                            alt="Приложение к диплому"
+                            loading="lazy"
+                        />
+                        <div class="certificate-card__caption">
+                            Приложение к диплому
+                        </div>
+                    </div>
 
-        <div class="service-card animate-on-scroll">
-          <div class="service-card__icon">&#128105;&#8205;&#128105;&#8205;&#128102;</div>
-          <div>
-            <h3 class="service-card__title">Групповые занятия</h3>
-            <p class="service-card__text">Спарринг-сессии для 2-4 человек. Отработка игровых ситуаций. Подготовка к турниру.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <div
+                        class="certificate-card animate-on-scroll"
+                        data-lightbox="images/certificates/profstandart.jpg"
+                    >
+                        <img
+                            src="images/certificates/profstandart.jpg"
+                            alt="Сертификат профстандарта"
+                            loading="lazy"
+                        />
+                        <div class="certificate-card__caption">
+                            Сертификат профстандарта
+                        </div>
+                    </div>
 
-  <!-- ДИПЛОМЫ И СЕРТИФИКАТЫ -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section__title">Дипломы и сертификаты</h2>
-      <p class="section__subtitle">Подтверждение квалификации тренера</p>
+                    <div
+                        class="certificate-card animate-on-scroll"
+                        data-lightbox="images/certificates/prof-sport-2019.jpg"
+                    >
+                        <img
+                            src="images/certificates/prof-sport-2019.jpg"
+                            alt="Спортивная награда профсоюза"
+                            loading="lazy"
+                        />
+                        <div class="certificate-card__caption">
+                            Награда профсоюза
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="certificates-grid">
-        <div class="certificate-card animate-on-scroll" data-lightbox="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/dip3_2-1024x724.jpg">
-          <img src="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/dip3_2-1024x724.jpg"
-               alt="Диплом тренера по настольному теннису" loading="lazy">
-          <div class="certificate-card__caption">Диплом тренера по НТ</div>
-        </div>
+        <!-- РЕЙТИНГИ -->
+        <section class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Два рейтинга — две руки</h2>
+                <p class="section__subtitle">
+                    Сергей — единственный участник с двумя профилями TTW: правая
+                    и левая рука
+                </p>
 
-        <div class="certificate-card animate-on-scroll" data-lightbox="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/pril3_2-724x1024.jpg">
-          <img src="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/pril3_2-724x1024.jpg"
-               alt="Приложение к диплому" loading="lazy">
-          <div class="certificate-card__caption">Приложение к диплому</div>
-        </div>
+                <div class="ratings">
+                    <a
+                        href="https://r.ttw.ru/players/?id=58b1dc3"
+                        target="_blank"
+                        rel="noopener"
+                        class="rating-card animate-on-scroll"
+                    >
+                        <div class="rating-card__logo">&#9758; TTW</div>
+                        <h3 class="rating-card__title">Правая рука</h3>
+                        <p class="rating-card__text">
+                            Основной рейтинг, классическая хватка. Результаты в
+                            турнирах «Мирок» и не только.
+                        </p>
+                        <span class="rating-card__link"
+                            >Открыть профиль &#8594;</span
+                        >
+                    </a>
+                    <a
+                        href="https://r.ttw.ru/players/?id=61877aa"
+                        target="_blank"
+                        rel="noopener"
+                        class="rating-card animate-on-scroll"
+                    >
+                        <div class="rating-card__logo">&#9756; TTW</div>
+                        <h3 class="rating-card__title">Левая рука</h3>
+                        <p class="rating-card__text">
+                            Второй рейтинг — уникальный случай в системе TTW.
+                            Игра левой для развития координации.
+                        </p>
+                        <span class="rating-card__link"
+                            >Открыть профиль &#8594;</span
+                        >
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div class="certificate-card animate-on-scroll" data-lightbox="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/Certificate-profstandart-4-724x1024.jpg">
-          <img src="https://tt.dudc-sergej.ru/wp-content/uploads/2025/12/Certificate-profstandart-4-724x1024.jpg"
-               alt="Сертификат профстандарта" loading="lazy">
-          <div class="certificate-card__caption">Сертификат профстандарта</div>
-        </div>
+        <!-- ЗАПИСЬ НА ЗАНЯТИЕ -->
+        <section class="section section--dark text-center" id="booking">
+            <div class="container">
+                <h2 class="section__title">Записаться на занятие</h2>
+                <p class="section__subtitle">
+                    Первое занятие — бесплатно! Напишите в Telegram или на
+                    email.
+                </p>
 
-        <div class="certificate-card animate-on-scroll" data-lightbox="https://sergey-dudchenko.ru/dudchenko/prof_sport_2019.jpg">
-          <img src="https://sergey-dudchenko.ru/dudchenko/prof_sport_2019_sm.jpg"
-               alt="Спортивная награда профсоюза" loading="lazy">
-          <div class="certificate-card__caption">Награда профсоюза</div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="flex-center-wrap mt-lg">
+                    <a
+                        href="https://t.me/dudc_sergej"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn--primary btn--lg"
+                    >
+                        &#128172; Написать в Telegram
+                    </a>
+                    <a
+                        href="mailto:slserg2008@mail.ru"
+                        class="btn btn--white btn--lg"
+                    >
+                        &#9993; Написать на Email
+                    </a>
+                </div>
 
-  <!-- РЕЙТИНГИ -->
-  <section class="section section--gray">
-    <div class="container">
-      <h2 class="section__title">Два рейтинга — две руки</h2>
-      <p class="section__subtitle">Сергей — единственный участник с двумя профилями TTW: правая и левая рука</p>
+                <div class="mt-xl">
+                    <p class="booking-address">
+                        &#128205; ТРЦ «Палас», 3 этаж, Ping Pong Club<br />
+                        г. Симферополь, пр. Кирова 78<br />
+                        Расписание: ежедневно 10:00 — 22:00
+                    </p>
+                </div>
+            </div>
+        </section>
 
-      <div class="ratings">
-        <a href="https://r.ttw.ru/players/?id=58b1dc3" target="_blank" rel="noopener" class="rating-card animate-on-scroll">
-          <div class="rating-card__logo">&#9758; TTW</div>
-          <h3 class="rating-card__title">Правая рука</h3>
-          <p class="rating-card__text">Основной рейтинг, классическая хватка. Результаты в турнирах «Мирок» и не только.</p>
-          <span class="rating-card__link">Открыть профиль &#8594;</span>
-        </a>
-        <a href="https://r.ttw.ru/players/?id=61877aa" target="_blank" rel="noopener" class="rating-card animate-on-scroll">
-          <div class="rating-card__logo">&#9756; TTW</div>
-          <h3 class="rating-card__title">Левая рука</h3>
-          <p class="rating-card__text">Второй рейтинг — уникальный случай в системе TTW. Игра левой для развития координации.</p>
-          <span class="rating-card__link">Открыть профиль &#8594;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div>
+                        <div class="header__logo mb-sm">
+                            <span class="header__logo-icon">&#127955;</span>
+                            <span class="header__logo-text"
+                                >МИРОК <span>НТ</span></span
+                            >
+                        </div>
+                        <p class="footer__text">
+                            Любительский рейтинговый турнир по настольному
+                            теннису в Симферополе.
+                        </p>
+                        <div class="footer__socials">
+                            <a
+                                href="https://t.me/dudc_sergej"
+                                class="footer__social"
+                                aria-label="Telegram"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9993;</a
+                            >
+                            <a
+                                href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA"
+                                class="footer__social"
+                                aria-label="YouTube"
+                                target="_blank"
+                                rel="noopener"
+                                >&#9654;</a
+                            >
+                            <a
+                                href="https://vk.com/sergei_dudchenko"
+                                class="footer__social"
+                                aria-label="ВКонтакте"
+                                target="_blank"
+                                rel="noopener"
+                                >VK</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Разделы</h4>
+                        <a href="about.html" class="footer__link">О турнире</a>
+                        <a href="tournaments.html" class="footer__link"
+                            >Турниры и результаты</a
+                        >
+                        <a href="register.html" class="footer__link"
+                            >Регистрация</a
+                        >
+                        <a href="rules.html" class="footer__link"
+                            >Правила и регламент</a
+                        >
+                        <a href="coach.html" class="footer__link">Тренер</a>
+                        <a href="fun.html" class="footer__link">Интересное</a>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Контакты</h4>
+                        <a href="mailto:slserg2008@mail.ru" class="footer__link"
+                            >&#9993; slserg2008@mail.ru</a
+                        >
+                        <a
+                            href="https://t.me/dudc_sergej"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >&#128172; Telegram</a
+                        >
+                        <p class="footer__link cursor-default">
+                            &#128205; Симферополь, пр. Кирова 78
+                        </p>
+                        <p class="footer__link cursor-default">
+                            &#127970; ТРЦ «Палас», 3 этаж
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footer__title">Рейтинги</h4>
+                        <a
+                            href="https://r.ttw.ru/tournaments/"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >TTW — Рейтинг турниров</a
+                        >
+                        <a
+                            href="https://rttf.ru/tournaments/?halls[]=726"
+                            class="footer__link"
+                            target="_blank"
+                            rel="noopener"
+                            >RTTF — Российская федерация</a
+                        >
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>
+                        &copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного
+                        тенниса»
+                    </p>
+                </div>
+            </div>
+        </footer>
 
-  <!-- ЗАПИСЬ НА ЗАНЯТИЕ -->
-  <section class="section section--dark" id="booking" style="text-align:center;">
-    <div class="container">
-      <h2 class="section__title">Записаться на занятие</h2>
-      <p class="section__subtitle">Первое занятие — бесплатно! Напишите в Telegram или на email.</p>
-
-      <div style="display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap; margin-top:var(--space-lg);">
-        <a href="https://t.me/dudc_sergej" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
-          &#128172; Написать в Telegram
-        </a>
-        <a href="mailto:slserg2008@mail.ru" class="btn btn--white btn--lg">
-          &#9993; Написать на Email
-        </a>
-      </div>
-
-      <div style="margin-top:var(--space-xl);">
-        <p style="color:var(--color-text-light); opacity:0.7;">
-          &#128205; ТРЦ «Палас», 3 этаж, Ping Pong Club<br>
-          г. Симферополь, пр. Кирова 78<br>
-          Расписание: ежедневно 10:00 — 22:00
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="header__logo" style="margin-bottom:var(--space-sm);">
-            <span class="header__logo-icon">&#127955;</span>
-            <span class="header__logo-text">МИРОК <span>НТ</span></span>
-          </div>
-          <p class="footer__text">Любительский рейтинговый турнир по настольному теннису в Симферополе.</p>
-          <div class="footer__socials">
-            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">&#9993;</a>
-            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">&#9654;</a>
-            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__title">Разделы</h4>
-          <a href="about.html" class="footer__link">О турнире</a>
-          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
-          <a href="register.html" class="footer__link">Регистрация</a>
-          <a href="rules.html" class="footer__link">Правила и регламент</a>
-          <a href="coach.html" class="footer__link">Тренер</a>
-          <a href="fun.html" class="footer__link">Интересное</a>
-        </div>
-        <div>
-          <h4 class="footer__title">Контакты</h4>
-          <a href="mailto:slserg2008@mail.ru" class="footer__link">&#9993; slserg2008@mail.ru</a>
-          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">&#128172; Telegram</a>
-          <p class="footer__link" style="cursor:default;">&#128205; Симферополь, пр. Кирова 78</p>
-          <p class="footer__link" style="cursor:default;">&#127970; ТРЦ «Палас», 3 этаж</p>
-        </div>
-        <div>
-          <h4 class="footer__title">Рейтинги</h4>
-          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">TTW — Рейтинг турниров</a>
-          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">RTTF — Российская федерация</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного тенниса»</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-</body>
+        <script src="js/main.js" defer></script>
+    </body>
 </html>
