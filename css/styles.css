@@ -1630,7 +1630,8 @@ p {
 
 .certificate-card img {
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: cover;
     display: block;
 }
 
@@ -1739,6 +1740,15 @@ p {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
     transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.fun-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .fun-card:hover {
@@ -1918,6 +1928,92 @@ p {
 
 .lightbox__close:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   МОДАЛЬНОЕ ОКНО
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+
+.modal--open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal__content {
+    position: relative;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    font-size: var(--text-xl);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.modal__close:hover {
+    background: var(--color-bg-section);
+    color: var(--color-text);
+}
+
+.modal__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.modal__subtitle {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.modal__success {
+    text-align: center;
+    padding: var(--space-lg) 0;
 }
 
 /* ============================================

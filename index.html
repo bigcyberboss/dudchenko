@@ -425,16 +425,127 @@
                             <a href="coach.html" class="btn btn--primary"
                                 >Подробнее о тренере</a
                             >
-                            <a
-                                href="coach.html#booking"
+                            <button
+                                type="button"
                                 class="btn btn--outline"
-                                >Записаться на занятие</a
+                                id="openBookingModal"
                             >
+                                Записаться на занятие
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ==================== МОДАЛЬНОЕ ОКНО: ЗАПИСЬ НА ЗАНЯТИЕ ==================== -->
+        <div
+            class="modal"
+            id="bookingModal"
+            aria-hidden="true"
+            role="dialog"
+            aria-labelledby="bookingModalTitle"
+        >
+            <div class="modal__overlay" data-modal-close></div>
+            <div class="modal__content">
+                <button
+                    class="modal__close"
+                    data-modal-close
+                    aria-label="Закрыть"
+                >
+                    &times;
+                </button>
+                <h2 class="modal__title" id="bookingModalTitle">
+                    Записаться на занятие
+                </h2>
+                <p class="modal__subtitle">
+                    Первое занятие бесплатно! Заполните форму и мы свяжемся.
+                </p>
+
+                <form
+                    id="bookingForm"
+                    action="https://formsubmit.co/slserg2008@mail.ru"
+                    method="POST"
+                    novalidate
+                >
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="Запись на занятие у тренера"
+                    />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input
+                        type="text"
+                        name="_honey"
+                        style="display: none"
+                        tabindex="-1"
+                        autocomplete="off"
+                        aria-hidden="true"
+                    />
+
+                    <div class="form-group">
+                        <label for="booking-name" class="form-label"
+                            >Ваше имя
+                            <span class="form-label__required">*</span></label
+                        >
+                        <input
+                            type="text"
+                            id="booking-name"
+                            name="name"
+                            class="form-input"
+                            placeholder="Как вас зовут?"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-contact" class="form-label"
+                            >Telegram или телефон
+                            <span class="form-label__required">*</span></label
+                        >
+                        <input
+                            type="text"
+                            id="booking-contact"
+                            name="contact"
+                            class="form-input"
+                            placeholder="@username или +7..."
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-message" class="form-label"
+                            >Комментарий</label
+                        >
+                        <textarea
+                            id="booking-message"
+                            name="message"
+                            class="form-textarea"
+                            placeholder="Опыт игры, удобное время..."
+                            rows="3"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn--primary btn--lg w-full"
+                    >
+                        Отправить заявку
+                    </button>
+                </form>
+
+                <div
+                    class="modal__success"
+                    id="bookingSuccess"
+                    style="display: none"
+                >
+                    <div class="form-success__icon">&#9989;</div>
+                    <h3 class="form-success__title">Заявка отправлена!</h3>
+                    <p class="form-success__text">
+                        Сергей свяжется с вами для подтверждения.
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <!-- ==================== FOOTER ==================== -->
         <footer class="footer" id="footer">
@@ -461,7 +572,7 @@
                                 target="_blank"
                                 rel="noopener"
                             >
-                                &#9993;
+                                &#9992;
                             </a>
                             <a
                                 href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA"
@@ -508,7 +619,7 @@
                             href="mailto:slserg2008@mail.ru"
                             class="footer__link"
                         >
-                            &#9993; slserg2008@mail.ru
+                            &#128231; slserg2008@mail.ru
                         </a>
                         <a
                             href="https://t.me/dudc_sergej"
@@ -522,7 +633,7 @@
                             &#128205; Симферополь, пр. Кирова 78
                         </p>
                         <p class="footer__link cursor-default">
-                            &#127970; ТРЦ «Палас», 3 этаж, Ping Pong Club
+                            &#127970; ТРЦ «Палас», 3 этаж
                         </p>
                     </div>
 
@@ -535,7 +646,7 @@
                             target="_blank"
                             rel="noopener"
                         >
-                            TTW — Рейтинг турниров
+                            TTW – Рейтинг турниров
                         </a>
                         <a
                             href="https://rttf.ru/tournaments/?halls[]=726"
@@ -543,7 +654,7 @@
                             target="_blank"
                             rel="noopener"
                         >
-                            RTTF — Российская федерация
+                            RTTF – Федерация НТ
                         </a>
                     </div>
                 </div>

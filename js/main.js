@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initRegisterForm();
   initQuiz();
   initLightbox();
+  initBookingModal();
 });
 
 /* --- Мобильное меню (бургер) --- */
@@ -374,5 +375,79 @@ function initLightbox() {
     lightbox.classList.remove("lightbox--open");
     document.body.style.overflow = "";
     img.src = "";
+  }
+}
+
+/* --- Модальное окно записи на занятие --- */
+function initBookingModal() {
+  const openBtn = document.getElementById("openBookingModal");
+  const modal = document.getElementById("bookingModal");
+  if (!openBtn || !modal) return;
+
+  const form = document.getElementById("bookingForm");
+  const success = document.getElementById("bookingSuccess");
+
+  function openModal() {
+    modal.classList.add("modal--open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("modal--open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", openModal);
+
+  modal.querySelectorAll("[data-modal-close]").forEach((el) => {
+    el.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("modal--open")) {
+      closeModal();
+    }
+  });
+
+  if (form && success) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector("#booking-name");
+      const contact = form.querySelector("#booking-contact");
+
+      if (!name.value.trim()) {
+        name.focus();
+        return;
+      }
+      if (!contact.value.trim()) {
+        contact.focus();
+        return;
+      }
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Отправка...";
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.style.display = "none";
+            success.style.display = "";
+          } else {
+            throw new Error("Ошибка");
+          }
+        })
+        .catch(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Отправить заявку";
+        });
+    });
   }
 }
