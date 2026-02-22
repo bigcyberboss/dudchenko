@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Правила и регламент турнира «Мирок настольного тенниса» — формат игры, схемы турнирной сетки, FAQ.">
+  <title>Правила — Мирок настольного тенниса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="На главную">
+        <span class="header__logo-icon">&#127955;</span>
+        <span class="header__logo-text">МИРОК <span>НТ</span></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О турнире</a></li>
+          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
+          <li><a href="rules.html" class="nav__link nav__link--active">Правила</a></li>
+          <li><a href="coach.html" class="nav__link">Тренер</a></li>
+          <li><a href="fun.html" class="nav__link">Интересное</a></li>
+          <li class="nav__cta"><a href="register.html" class="btn btn--primary">Записаться</a></li>
+        </ul>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav__link">Главная</a>
+    <a href="about.html" class="nav__link">О турнире</a>
+    <a href="tournaments.html" class="nav__link">Турниры</a>
+    <a href="rules.html" class="nav__link nav__link--active">Правила</a>
+    <a href="coach.html" class="nav__link">Тренер</a>
+    <a href="fun.html" class="nav__link">Интересное</a>
+    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__content">
+      <h1 class="page-hero__title">Правила и регламент</h1>
+      <p class="page-hero__subtitle">Всё, что нужно знать перед участием в турнире</p>
+    </div>
+  </section>
+
+  <!-- РЕГЛАМЕНТ ТУРНИРА -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Регламент турнира «Мирок»</h2>
+      <p class="section__subtitle">Нажмите на раздел, чтобы раскрыть подробности</p>
+
+      <div class="accordion" id="rulesAccordion">
+
+        <div class="accordion-item accordion-item--open">
+          <button class="accordion-header" aria-expanded="true">
+            <span>&#128197; Время и место проведения</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <ul>
+                <li><strong>День:</strong> каждая среда</li>
+                <li><strong>Время:</strong> с 10:30 до 14:00</li>
+                <li><strong>Место:</strong> ТРЦ «Палас», 3 этаж, Ping Pong Club</li>
+                <li><strong>Адрес:</strong> г. Симферополь, пр. Кирова 78</li>
+                <li><strong>Явка:</strong> к 10:15 для разминки</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#128101; Участники</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <ul>
+                <li><strong>Минимум:</strong> 5 участников для проведения турнира</li>
+                <li><strong>Максимум:</strong> 16 участников</li>
+                <li>Турнир открыт для игроков <strong>любого уровня</strong></li>
+                <li>Необходима предварительная регистрация</li>
+                <li>При неявке без предупреждения — техническое поражение 0:3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#127942; Схемы проведения турнира</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Формат турнира зависит от количества участников:</p>
+              <ul>
+                <li><strong>Олимпийская система</strong> — проигравший выбывает. Применяется при большом числе участников (12-16).</li>
+                <li><strong>Прогрессивная система</strong> — проигравшие продолжают играть, но в нижних группах. Каждый проводит больше матчей.</li>
+                <li><strong>Двухминусовка (Double Elimination)</strong> — право на две ошибки. Выбываешь только после двух поражений. Применяется при 5-10 участниках.</li>
+              </ul>
+              <p style="margin-top:var(--space-md);">Диаграммы турнирных сеток:</p>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:var(--space-md); margin-top:var(--space-sm);">
+                <div class="certificate-card" data-lightbox="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/olimp.jpg">
+                  <img src="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/olimp.jpg"
+                       alt="Олимпийская сетка" loading="lazy">
+                  <div class="certificate-card__caption">Олимпийская</div>
+                </div>
+                <div class="certificate-card" data-lightbox="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/progressiv.jpg">
+                  <img src="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/progressiv.jpg"
+                       alt="Прогрессивная сетка" loading="lazy">
+                  <div class="certificate-card__caption">Прогрессивная</div>
+                </div>
+                <div class="certificate-card" data-lightbox="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/dvuhminus.jpg">
+                  <img src="https://tt.sergey-dudchenko.ru/wp-content/uploads/2025/02/dvuhminus.jpg"
+                       alt="Двухминусовая сетка" loading="lazy">
+                  <div class="certificate-card__caption">Двухминусовка</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#128176; Взнос и оплата</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <ul>
+                <li><strong>Размер взноса:</strong> ~500 руб. (зависит от числа участников и столов)</li>
+                <li>Взнос покрывает <strong>только аренду столов</strong></li>
+                <li>Никаких дополнительных или скрытых платежей</li>
+                <li>Турнир полностью <strong>некоммерческий</strong></li>
+                <li>Оплата — до начала турнира</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#128200; Рейтинговая система</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Результаты каждого турнира передаются в два всероссийских любительских рейтинга:</p>
+              <ul>
+                <li><strong><a href="https://r.ttw.ru/tournaments/" target="_blank" rel="noopener">TTW (Table Tennis World)</a></strong> — рейтинг любителей. Прогресс к рангу, форма за 10 матчей, винрейт.</li>
+                <li><strong><a href="https://rttf.ru/tournaments/?halls[]=726" target="_blank" rel="noopener">RTTF</a></strong> — Российская федерация настольного тенниса. Турниры, статистика, профили игроков.</li>
+              </ul>
+              <p>Каждый матч учитывается — это помогает отслеживать прогресс и мотивирует расти.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#127941; Награды</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <ul>
+                <li><strong>1-е место:</strong> медаль + электронная грамота + фото на сайте</li>
+                <li><strong>2-е место:</strong> медаль + электронная грамота</li>
+                <li><strong>3-е место:</strong> медаль</li>
+                <li>Все результаты публикуются в рейтингах TTW и RTTF</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>&#127955; Правила игры</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Матчи проводятся по официальным правилам настольного тенниса (Минспорт РФ):</p>
+              <ul>
+                <li>Игра до <strong>3-х выигранных сетов</strong> (до 11 очков в каждом)</li>
+                <li>При счёте 10:10 — играем до разницы в 2 очка</li>
+                <li>Подача переходит каждые 2 очка</li>
+                <li>При счёте 2:2 в сетах — решающий сет, смена стороны при 5 очках</li>
+                <li>Мяч должен коснуться своей стороны, затем стороны соперника</li>
+              </ul>
+              <p style="margin-top:var(--space-md);">
+                <a href="https://tt.dudc-sergej.ru/wp-content/uploads/2025/04/Pravila_nastolnogo_tennisa_ot_10_noyabrya_2023.pdf"
+                   target="_blank" rel="noopener" class="btn btn--outline">
+                  Скачать полные правила (PDF)
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /accordion -->
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">Частые вопросы</h2>
+      <p class="section__subtitle">Ответы на популярные вопросы новых участников</p>
+
+      <div class="accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Нужна ли своя ракетка?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Да, приходите со своей ракеткой. Если у вас нет хорошей ракетки — тренер может помочь с подбором. На месте можно попробовать разные варианты.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Я совсем новичок, можно мне прийти?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Конечно! Турнир открыт для игроков любого уровня. Рекомендуем для начала взять несколько тренировок у тренера, чтобы освоить базовую технику и почувствовать уверенность. Первое занятие — бесплатно!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Сколько матчей я проведу за турнир?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Зависит от формата и числа участников. В среднем — от 3 до 7 матчей за турнир. При двухминусовке или прогрессивной системе — больше, так как после поражения вы продолжаете играть.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Что такое рейтинг TTW и как он работает?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>TTW (Table Tennis World) — это всероссийский любительский рейтинг. После каждого матча ваш рейтинг пересчитывается по формуле ELO. Победа над сильным соперником даёт больше очков. Проигрыш слабому — забирает больше. Это мотивирует играть с соперниками разного уровня.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Можно ли просто прийти посмотреть?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Да, приходите как зритель! Это поможет понять атмосферу и формат турнира. Если понравится — регистрируйтесь на следующую среду.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Что если я не смогу прийти после регистрации?</span>
+            <span class="accordion-header__icon">&#9660;</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body__content">
+              <p>Предупредите организатора заранее (хотя бы за день) через Telegram. Без предупреждения — техническое поражение 0:3 во всех матчах. Это важно, так как от числа участников зависит формат турнира и аренда столов.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /faqAccordion -->
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark" style="text-align:center;">
+    <div class="container">
+      <h2 class="section__title">Готовы к игре?</h2>
+      <p class="section__subtitle">Зарегистрируйтесь и приходите в среду!</p>
+      <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="header__logo" style="margin-bottom:var(--space-sm);">
+            <span class="header__logo-icon">&#127955;</span>
+            <span class="header__logo-text">МИРОК <span>НТ</span></span>
+          </div>
+          <p class="footer__text">Любительский рейтинговый турнир по настольному теннису в Симферополе.</p>
+          <div class="footer__socials">
+            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">&#9993;</a>
+            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">&#9654;</a>
+            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Разделы</h4>
+          <a href="about.html" class="footer__link">О турнире</a>
+          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
+          <a href="register.html" class="footer__link">Регистрация</a>
+          <a href="rules.html" class="footer__link">Правила и регламент</a>
+          <a href="coach.html" class="footer__link">Тренер</a>
+          <a href="fun.html" class="footer__link">Интересное</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Контакты</h4>
+          <a href="mailto:slserg2008@mail.ru" class="footer__link">&#9993; slserg2008@mail.ru</a>
+          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">&#128172; Telegram</a>
+          <p class="footer__link" style="cursor:default;">&#128205; Симферополь, пр. Кирова 78</p>
+          <p class="footer__link" style="cursor:default;">&#127970; ТРЦ «Палас», 3 этаж</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Рейтинги</h4>
+          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">TTW — Рейтинг турниров</a>
+          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">RTTF — Российская федерация</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного тенниса»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

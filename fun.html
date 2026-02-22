@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интересное о настольном теннисе — тест на знание правил, факты, советы по улучшению игры, история ракеток.">
+  <title>Интересное — Мирок настольного тенниса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="На главную">
+        <span class="header__logo-icon">&#127955;</span>
+        <span class="header__logo-text">МИРОК <span>НТ</span></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О турнире</a></li>
+          <li><a href="tournaments.html" class="nav__link">Турниры</a></li>
+          <li><a href="rules.html" class="nav__link">Правила</a></li>
+          <li><a href="coach.html" class="nav__link">Тренер</a></li>
+          <li><a href="fun.html" class="nav__link nav__link--active">Интересное</a></li>
+          <li class="nav__cta"><a href="register.html" class="btn btn--primary">Записаться</a></li>
+        </ul>
+      </nav>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav__link">Главная</a>
+    <a href="about.html" class="nav__link">О турнире</a>
+    <a href="tournaments.html" class="nav__link">Турниры</a>
+    <a href="rules.html" class="nav__link">Правила</a>
+    <a href="coach.html" class="nav__link">Тренер</a>
+    <a href="fun.html" class="nav__link nav__link--active">Интересное</a>
+    <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero__content">
+      <h1 class="page-hero__title">Интересное</h1>
+      <p class="page-hero__subtitle">Тесты, факты, советы и полезные материалы о настольном теннисе</p>
+    </div>
+  </section>
+
+  <!-- КАРТОЧКИ КОНТЕНТА -->
+  <section class="section">
+    <div class="container">
+      <div class="fun-cards">
+
+        <!-- Тест -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header">
+            <div class="fun-card__icon">&#129504;</div>
+            <h3 class="fun-card__title">Тест: Знаете ли вы правила?</h3>
+          </div>
+          <div class="fun-card__body">
+            <p class="fun-card__text">Проверьте свои знания правил настольного тенниса. 5 вопросов — сможете набрать 5 из 5?</p>
+            <a href="#quiz" class="btn btn--primary" style="width:100%;">Пройти тест</a>
+          </div>
+        </div>
+
+        <!-- Советы -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header" style="background:linear-gradient(135deg, #1565c0, #0d47a1);">
+            <div class="fun-card__icon">&#128161;</div>
+            <h3 class="fun-card__title">Как улучшить игру</h3>
+          </div>
+          <div class="fun-card__body">
+            <p class="fun-card__text">Проверенные советы от тренера для любителей:</p>
+            <ul class="fun-card__list">
+              <li>&#9989; Тренируйтесь регулярно — лучше 3 раза по часу, чем 1 раз 3 часа</li>
+              <li>&#9989; Найдите постоянного спарринг-партнёра вашего уровня или чуть выше</li>
+              <li>&#9989; Играйте турниры — настоящие матчи учат быстрее тренировок</li>
+              <li>&#9989; Работайте над ногами — «выигрывают ногами, а не руками»</li>
+              <li>&#9989; Записывайте матчи на видео и анализируйте ошибки</li>
+              <li>&#9989; Не меняйте ракетку слишком часто — привыкните к одной</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Факты -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header" style="background:linear-gradient(135deg, #e65100, #bf360c);">
+            <div class="fun-card__icon">&#127775;</div>
+            <h3 class="fun-card__title">Интересные факты</h3>
+          </div>
+          <div class="fun-card__body">
+            <ul class="fun-card__list">
+              <li>&#127955; Скорость мяча при топспине может достигать <strong>150 км/ч</strong></li>
+              <li>&#127955; Настольный теннис — самый быстрый ракеточный вид спорта</li>
+              <li>&#127955; В мире более <strong>300 миллионов</strong> любителей НТ</li>
+              <li>&#127955; Средний розыгрыш длится всего <strong>3-5 секунд</strong></li>
+              <li>&#127955; Мяч вращается со скоростью до <strong>9000 об/мин</strong></li>
+              <li>&#127955; НТ стал олимпийским видом спорта в <strong>1988 году</strong></li>
+              <li>&#127955; Первый журнал о пинг-понге в России вышел в <strong>1928 году</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- История ракеток -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header" style="background:linear-gradient(135deg, #6a1b9a, #4a148c);">
+            <div class="fun-card__icon">&#127993;</div>
+            <h3 class="fun-card__title">Как выбрать ракетку</h3>
+          </div>
+          <div class="fun-card__body">
+            <p class="fun-card__text">
+              Путь от магазинной ракетки за 400 рублей до профессиональной сборной —
+              опыт нашего тренера:
+            </p>
+            <ul class="fun-card__list">
+              <li><strong>Stiga (400 руб.)</strong> — первая ракетка из магазина. Для начала подходит.</li>
+              <li><strong>Donic (800 руб.)</strong> — чуть лучше, но всё ещё магазинный уровень.</li>
+              <li><strong>Double Fish (2500 руб.)</strong> — первая серьёзная ракетка с приличными накладками.</li>
+              <li><strong>Сборная ракетка</strong> — основание + накладки отдельно. Это совершенно другой уровень контроля и вращения.</li>
+            </ul>
+            <p class="fun-card__text" style="margin-top:var(--space-sm);">
+              Совет: не спешите покупать дорогую ракетку. Сначала освойте базовую технику,
+              а потом тренер поможет подобрать оптимальный комплект.
+            </p>
+          </div>
+        </div>
+
+        <!-- Вредные советы -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header" style="background:linear-gradient(135deg, #d32f2f, #b71c1c);">
+            <div class="fun-card__icon">&#128520;</div>
+            <h3 class="fun-card__title">Вредные советы</h3>
+          </div>
+          <div class="fun-card__body">
+            <p class="fun-card__text">Как гарантированно проиграть:</p>
+            <ul class="fun-card__list">
+              <li>&#10060; Бейте изо всей силы — точность не нужна</li>
+              <li>&#10060; Стойте на месте — пусть мяч летит к вам</li>
+              <li>&#10060; Меняйте ракетку перед каждым турниром</li>
+              <li>&#10060; Не разминайтесь — зачем тратить время?</li>
+              <li>&#10060; Спорьте с судьёй по каждому мячу</li>
+              <li>&#10060; После проигрыша обвиняйте ракетку, стол и освещение</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Полезные ссылки -->
+        <div class="fun-card animate-on-scroll">
+          <div class="fun-card__header" style="background:linear-gradient(135deg, #2e7d32, #1b5e20);">
+            <div class="fun-card__icon">&#128279;</div>
+            <h3 class="fun-card__title">Полезные ссылки</h3>
+          </div>
+          <div class="fun-card__body">
+            <ul class="fun-card__list">
+              <li><a href="https://r.ttw.ru/tournaments/" target="_blank" rel="noopener">TTW — Всероссийский рейтинг</a></li>
+              <li><a href="https://rttf.ru/tournaments/?halls[]=726" target="_blank" rel="noopener">RTTF — Федерация НТ</a></li>
+              <li><a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" target="_blank" rel="noopener">YouTube канал турнира</a></li>
+              <li><a href="https://t.me/dudc_sergej" target="_blank" rel="noopener">Telegram — новости и регистрация</a></li>
+              <li><a href="https://tt.dudc-sergej.ru/wp-content/uploads/2025/04/Pravila_nastolnogo_tennisa_ot_10_noyabrya_2023.pdf" target="_blank" rel="noopener">Правила НТ (PDF, Минспорт РФ)</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ТЕСТ -->
+  <section class="section section--gray" id="quiz">
+    <div class="container">
+      <h2 class="section__title">Тест: Правила настольного тенниса</h2>
+      <p class="section__subtitle">5 вопросов — проверьте себя!</p>
+
+      <div class="quiz-container" id="quizContainer">
+
+        <div class="quiz-question" data-correct="2">
+          <div class="quiz-question__number">Вопрос 1 из 5</div>
+          <p class="quiz-question__text">До скольких очков играется сет в настольном теннисе?</p>
+          <label class="quiz-option"><input type="radio" name="q1" value="1"> До 15 очков</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="2"> До 11 очков</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="3"> До 21 очка</label>
+        </div>
+
+        <div class="quiz-question" data-correct="1">
+          <div class="quiz-question__number">Вопрос 2 из 5</div>
+          <p class="quiz-question__text">Через сколько очков переходит подача?</p>
+          <label class="quiz-option"><input type="radio" name="q2" value="1"> Через 2 очка</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="2"> Через 5 очков</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="3"> После каждого очка</label>
+        </div>
+
+        <div class="quiz-question" data-correct="3">
+          <div class="quiz-question__number">Вопрос 3 из 5</div>
+          <p class="quiz-question__text">Что происходит при счёте 10:10 в сете?</p>
+          <label class="quiz-option"><input type="radio" name="q3" value="1"> Играют ещё один мяч (кто забьёт — выигрывает)</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="2"> Назначается переигровка</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="3"> Играют до разницы в 2 очка, подача через 1 очко</label>
+        </div>
+
+        <div class="quiz-question" data-correct="2">
+          <div class="quiz-question__number">Вопрос 4 из 5</div>
+          <p class="quiz-question__text">Какой минимальной высоты должен быть подброс мяча при подаче?</p>
+          <label class="quiz-option"><input type="radio" name="q4" value="1"> 10 см</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="2"> 16 см</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="3"> Без ограничений</label>
+        </div>
+
+        <div class="quiz-question" data-correct="1">
+          <div class="quiz-question__number">Вопрос 5 из 5</div>
+          <p class="quiz-question__text">Сколько сетов нужно выиграть в стандартном матче?</p>
+          <label class="quiz-option"><input type="radio" name="q5" value="1"> 3 из 5</label>
+          <label class="quiz-option"><input type="radio" name="q5" value="2"> 2 из 3</label>
+          <label class="quiz-option"><input type="radio" name="q5" value="3"> 4 из 7</label>
+        </div>
+
+        <button class="btn btn--primary btn--lg" style="width:100%; margin-top:var(--space-md);" id="quizSubmit">
+          Проверить ответы
+        </button>
+
+        <div class="quiz-result" id="quizResult">
+          <div class="quiz-result__score" id="quizScore">0/5</div>
+          <p style="margin-top:var(--space-sm); color:var(--color-text-secondary);" id="quizMessage"></p>
+          <button class="btn btn--outline" style="margin-top:var(--space-md);" id="quizRetry">Пройти ещё раз</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark" style="text-align:center;">
+    <div class="container">
+      <h2 class="section__title">Хотите проверить знания на практике?</h2>
+      <p class="section__subtitle">Приходите на турнир — лучший способ учиться!</p>
+      <a href="register.html" class="btn btn--primary btn--lg">Записаться на турнир</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="header__logo" style="margin-bottom:var(--space-sm);">
+            <span class="header__logo-icon">&#127955;</span>
+            <span class="header__logo-text">МИРОК <span>НТ</span></span>
+          </div>
+          <p class="footer__text">Любительский рейтинговый турнир по настольному теннису в Симферополе.</p>
+          <div class="footer__socials">
+            <a href="https://t.me/dudc_sergej" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener">&#9993;</a>
+            <a href="https://www.youtube.com/channel/UCORoGaBUjJBkOFyATqjixNA" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener">&#9654;</a>
+            <a href="https://vk.com/sergei_dudchenko" class="footer__social" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Разделы</h4>
+          <a href="about.html" class="footer__link">О турнире</a>
+          <a href="tournaments.html" class="footer__link">Турниры и результаты</a>
+          <a href="register.html" class="footer__link">Регистрация</a>
+          <a href="rules.html" class="footer__link">Правила и регламент</a>
+          <a href="coach.html" class="footer__link">Тренер</a>
+          <a href="fun.html" class="footer__link">Интересное</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Контакты</h4>
+          <a href="mailto:slserg2008@mail.ru" class="footer__link">&#9993; slserg2008@mail.ru</a>
+          <a href="https://t.me/dudc_sergej" class="footer__link" target="_blank" rel="noopener">&#128172; Telegram</a>
+          <p class="footer__link" style="cursor:default;">&#128205; Симферополь, пр. Кирова 78</p>
+          <p class="footer__link" style="cursor:default;">&#127970; ТРЦ «Палас», 3 этаж</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Рейтинги</h4>
+          <a href="https://r.ttw.ru/tournaments/" class="footer__link" target="_blank" rel="noopener">TTW — Рейтинг турниров</a>
+          <a href="https://rttf.ru/tournaments/?halls[]=726" class="footer__link" target="_blank" rel="noopener">RTTF — Российская федерация</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025&ndash;2026 Дудченко С.В. «Мирок настольного тенниса»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

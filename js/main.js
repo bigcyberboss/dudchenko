@@ -2,84 +2,89 @@
    МИРОК НТ — Основной JavaScript
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   initBurgerMenu();
   initHeaderScroll();
   initCountdown();
   initScrollAnimations();
+  initAccordion();
+  initTournamentFilter();
+  initRegisterForm();
+  initQuiz();
+  initLightbox();
 });
 
 /* --- Мобильное меню (бургер) --- */
 function initBurgerMenu() {
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
   if (!burger || !mobileMenu) return;
 
-  burger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('mobile-menu--open');
+  burger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.contains("mobile-menu--open");
 
     if (isOpen) {
-      mobileMenu.classList.remove('mobile-menu--open');
-      burger.classList.remove('burger--active');
-      burger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      mobileMenu.classList.remove("mobile-menu--open");
+      burger.classList.remove("burger--active");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
     } else {
-      mobileMenu.classList.add('mobile-menu--open');
-      burger.classList.add('burger--active');
-      burger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
+      mobileMenu.classList.add("mobile-menu--open");
+      burger.classList.add("burger--active");
+      burger.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
     }
   });
 
   // Закрываем меню при клике на ссылку
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('mobile-menu--open');
-      burger.classList.remove('burger--active');
-      burger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("mobile-menu--open");
+      burger.classList.remove("burger--active");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
     });
   });
 }
 
 /* --- Шапка: эффект при прокрутке --- */
 function initHeaderScroll() {
-  const header = document.getElementById('header');
+  const header = document.getElementById("header");
   if (!header) return;
 
   const onScroll = () => {
     if (window.scrollY > 50) {
-      header.classList.add('header--scrolled');
+      header.classList.add("header--scrolled");
     } else {
-      header.classList.remove('header--scrolled');
+      header.classList.remove("header--scrolled");
     }
   };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 }
 
 /* --- Обратный отсчёт до ближайшего турнира --- */
 function initCountdown() {
-  const daysEl = document.getElementById('countdown-days');
-  const hoursEl = document.getElementById('countdown-hours');
-  const minEl = document.getElementById('countdown-min');
-  const secEl = document.getElementById('countdown-sec');
+  const daysEl = document.getElementById("countdown-days");
+  const hoursEl = document.getElementById("countdown-hours");
+  const minEl = document.getElementById("countdown-min");
+  const secEl = document.getElementById("countdown-sec");
 
   if (!daysEl) return;
 
   // Ближайший турнир: среда 26 февраля 2026, 10:30 по Москве (UTC+3)
-  const targetDate = new Date('2026-02-25T07:30:00Z'); // 10:30 MSK = 07:30 UTC
+  const targetDate = new Date("2026-02-25T07:30:00Z"); // 10:30 MSK = 07:30 UTC
 
   function update() {
     const now = new Date();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      daysEl.textContent = '0';
-      hoursEl.textContent = '0';
-      minEl.textContent = '0';
-      secEl.textContent = '0';
+      daysEl.textContent = "0";
+      hoursEl.textContent = "0";
+      minEl.textContent = "0";
+      secEl.textContent = "0";
       return;
     }
 
@@ -100,7 +105,7 @@ function initCountdown() {
 
 /* --- Анимации при прокрутке (IntersectionObserver) --- */
 function initScrollAnimations() {
-  const elements = document.querySelectorAll('.animate-on-scroll');
+  const elements = document.querySelectorAll(".animate-on-scroll");
   if (!elements.length) return;
 
   const observer = new IntersectionObserver(
@@ -109,7 +114,7 @@ function initScrollAnimations() {
         if (entry.isIntersecting) {
           // Каскадная задержка для элементов в одной группе
           setTimeout(() => {
-            entry.target.classList.add('animate-on-scroll--visible');
+            entry.target.classList.add("animate-on-scroll--visible");
           }, index * 100);
           observer.unobserve(entry.target);
         }
@@ -117,9 +122,203 @@ function initScrollAnimations() {
     },
     {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
+      rootMargin: "0px 0px -50px 0px",
+    },
   );
 
-  elements.forEach(el => observer.observe(el));
+  elements.forEach((el) => observer.observe(el));
+}
+
+/* --- Аккордеон (правила, FAQ) --- */
+function initAccordion() {
+  document.querySelectorAll(".accordion-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains("accordion-item--open");
+      const expanded = !isOpen;
+
+      item.classList.toggle("accordion-item--open");
+      header.setAttribute("aria-expanded", expanded);
+    });
+  });
+}
+
+/* --- Фильтр турниров --- */
+function initTournamentFilter() {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".archive-card");
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      buttons.forEach((b) => b.classList.remove("filter-btn--active"));
+      btn.classList.add("filter-btn--active");
+
+      cards.forEach((card) => {
+        if (filter === "all" || card.dataset.month === filter) {
+          card.classList.remove("archive-card--hidden");
+        } else {
+          card.classList.add("archive-card--hidden");
+        }
+      });
+    });
+  });
+}
+
+/* --- Форма регистрации --- */
+function initRegisterForm() {
+  const form = document.getElementById("registerForm");
+  const success = document.getElementById("formSuccess");
+  if (!form || !success) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const fullname = form.querySelector("#fullname");
+    const contact = form.querySelector("#contact");
+    const agree = form.querySelector("#agree");
+
+    if (!fullname.value.trim()) {
+      fullname.focus();
+      return;
+    }
+    if (!contact.value.trim()) {
+      contact.focus();
+      return;
+    }
+    if (!agree.checked) {
+      agree.focus();
+      return;
+    }
+
+    // Скрываем форму, показываем сообщение
+    form.style.display = "none";
+    success.classList.add("form-success--visible");
+  });
+}
+
+/* --- Тест на знание правил --- */
+function initQuiz() {
+  const container = document.getElementById("quizContainer");
+  const submitBtn = document.getElementById("quizSubmit");
+  const resultDiv = document.getElementById("quizResult");
+  const scoreEl = document.getElementById("quizScore");
+  const messageEl = document.getElementById("quizMessage");
+  const retryBtn = document.getElementById("quizRetry");
+
+  if (!container || !submitBtn) return;
+
+  submitBtn.addEventListener("click", () => {
+    const questions = container.querySelectorAll(".quiz-question");
+    let score = 0;
+    let allAnswered = true;
+
+    questions.forEach((q, i) => {
+      const correct = q.dataset.correct;
+      const selected = q.querySelector(`input[name="q${i + 1}"]:checked`);
+
+      // Сброс стилей
+      q.querySelectorAll(".quiz-option").forEach((opt) => {
+        opt.classList.remove("quiz-option--correct", "quiz-option--wrong");
+      });
+
+      if (!selected) {
+        allAnswered = false;
+        return;
+      }
+
+      const selectedOption = selected.closest(".quiz-option");
+
+      if (selected.value === correct) {
+        score++;
+        selectedOption.classList.add("quiz-option--correct");
+      } else {
+        selectedOption.classList.add("quiz-option--wrong");
+        // Подсветка правильного ответа
+        q.querySelectorAll(".quiz-option").forEach((opt) => {
+          const radio = opt.querySelector("input");
+          if (radio.value === correct) {
+            opt.classList.add("quiz-option--correct");
+          }
+        });
+      }
+    });
+
+    if (!allAnswered) return;
+
+    // Блокировка ответов
+    container
+      .querySelectorAll('input[type="radio"]')
+      .forEach((r) => (r.disabled = true));
+    submitBtn.style.display = "none";
+
+    scoreEl.textContent = score + "/5";
+    if (score === 5) {
+      messageEl.textContent = "Отлично! Вы знаете правила на 100%!";
+    } else if (score >= 3) {
+      messageEl.textContent = "Хороший результат! Но есть что повторить.";
+    } else {
+      messageEl.textContent =
+        "Стоит подучить правила. Загляните на страницу «Правила»!";
+    }
+    resultDiv.classList.add("quiz-result--visible");
+  });
+
+  if (retryBtn) {
+    retryBtn.addEventListener("click", () => {
+      container.querySelectorAll('input[type="radio"]').forEach((r) => {
+        r.disabled = false;
+        r.checked = false;
+      });
+      container.querySelectorAll(".quiz-option").forEach((opt) => {
+        opt.classList.remove("quiz-option--correct", "quiz-option--wrong");
+      });
+      submitBtn.style.display = "";
+      resultDiv.classList.remove("quiz-result--visible");
+    });
+  }
+}
+
+/* --- Лайтбокс для изображений --- */
+function initLightbox() {
+  const items = document.querySelectorAll("[data-lightbox]");
+  if (!items.length) return;
+
+  // Создаём lightbox-элемент
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.innerHTML =
+    '<button class="lightbox__close" aria-label="Закрыть">&times;</button>' +
+    '<img class="lightbox__img" src="" alt="">';
+  document.body.appendChild(lightbox);
+
+  const img = lightbox.querySelector(".lightbox__img");
+  const closeBtn = lightbox.querySelector(".lightbox__close");
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const src = item.dataset.lightbox;
+      img.src = src;
+      const itemImg = item.querySelector("img");
+      img.alt = itemImg ? itemImg.alt : "";
+      lightbox.classList.add("lightbox--open");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("lightbox--open");
+    document.body.style.overflow = "";
+    img.src = "";
+  }
 }
